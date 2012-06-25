@@ -103,12 +103,12 @@
                             
 
                             
-                        <label for="search">{% trans 'Search' %}:</label>
+                        
                         <form id="search-form"
                               action="{% url lfs_search %}"
                               autocomplete="off">
                             <input type="hidden" name="livesearch" value="1" />
-                            <input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" />
+                            <input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}" />
                             <input type="submit"
                                    value="{% trans 'Go!' %}" class="btn btn-success"/>
                         </form>
