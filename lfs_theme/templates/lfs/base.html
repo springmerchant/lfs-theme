@@ -85,21 +85,7 @@
                                 {% endif %}
                                 
                             {% endif %}
-							<li class="divider"></li>
-							{% if user.is_superuser %}
-                                {% if category %}
-                                    <li><a href="{% url lfs_manage_category category.id %}">{% trans 'Manage' %}</a></li>
-                                {% endif %}
-                                {% if product %}
-                                    <li><a href="{% url lfs_manage_product product.id %}">{% trans 'Manage' %}</a></li>
-                                {% endif %}
-                                {% if page %}
-                                    <li><a href="{% url lfs_manage_page page.id %}">{% trans 'Manage' %}</a></li>
-                                {% endif %}
-                                {% if not category and not product and not page %}
-                                    <li><a href="{% url lfs_manage_dashboard %}">{% trans 'Manage' %}</a></li>
-                                {% endif %}
-                            {% endif %}
+						
 							<li class="divider"></li>
 							<li><a href="/logout">{% trans 'Logout' %}</a></li>
                             <li><a href="{% url lfs_my_account %}">{% trans 'My account' %}</a></li>
