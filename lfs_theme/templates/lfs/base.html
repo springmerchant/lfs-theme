@@ -60,23 +60,23 @@
                         </a>
                     </div>
 					<div class="btn-group pull-right">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Username
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
-          </div>
-                    <div class="span-18 search last">
-                        {% if user.is_authenticated %}
+								<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								  <i class="icon-user"></i> {% if user.is_authenticated %}
                             {% if user.first_name %}
                                 <span>{{ user.first_name }} {{user.last_name}}</span>
                             {% else %}
                                 <span>{{ user.username }}</span>
-                            {% endif %} |
+                            {% endif %}
+								  <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								  <li><a href="#">Profile</a></li>
+								  <li class="divider"></li>
+								  <li><a href="#">Sign Out</a></li>
+								</ul>
+				  </div>
+                    <div class="span-18 search last">
+                         |
 
                             {% if user.is_superuser %}
                                 {% if category %}
