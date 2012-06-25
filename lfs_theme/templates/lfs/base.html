@@ -91,7 +91,7 @@
                             <li><a href="{% url lfs_my_account %}">{% trans 'My account' %}</a></li>
                         {% else %}
                             {% if not ANON_ONLY %}
-                                <li><a href="{% url lfs_login %}">{% trans 'Login' %}</a></li>
+                                <a href="{% url lfs_login %}">{% trans 'Login' %}</a>
                             {% endif %}
 
                         {% endif %}
