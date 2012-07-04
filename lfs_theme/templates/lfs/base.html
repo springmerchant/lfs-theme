@@ -100,10 +100,16 @@
 					<form id="search-form"
                               action="{% url lfs_search %}"
                               autocomplete="off">
-                            <input type="hidden" name="livesearch" value="1" />
-                            <input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}" />
-                            <input type="submit"
-                                   value="{% trans 'Go!' %}" class="btn"/>
+                            
+								   
+								   
+								   
+								   
+						
+              <div class="input-append">
+                <input type="text" size="16" id="appendedInputButton" class="span2" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}"><button type="button" class="btn" value="{% trans 'Go!' %}">Go!</button>
+              </div>
+              
                     </form>
                 {% endblock %}
             </div>
