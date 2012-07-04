@@ -331,6 +331,13 @@ table.search-results {
 }
 
 /* Tabs */
+
+#tabs {
+	background: #EAE5C8;
+	height: 34px;
+	box-shadow: 3px 3px 3px #888;
+}
+
 .tabs {
     padding: 10px 0 0 0;
 }
