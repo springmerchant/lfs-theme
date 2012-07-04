@@ -265,6 +265,8 @@ table.search-results {
 #search-form,
 .search-results-form {
     display:inline;
+	float: right;
+	margin-right: 5px;
 }
 
 #search-results {
