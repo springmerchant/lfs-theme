@@ -120,11 +120,7 @@
             </div>
         </div>
 
-        <div id="breadcrumbs">
-            <div class="container">
-                {% block breadcrumbs %}{% endblock %}
-            </div>
-        </div>
+        
 
         <div id="content">
             <div class="container">
@@ -144,6 +140,13 @@
                     {% endblock %}
                     <div class="{{ content_class }}">
                         <div class="middle-slot">
+						
+						<div id="breadcrumbs">
+            <div class="container">
+                {% block breadcrumbs %}{% endblock %}
+            </div>
+        </div>
+						
                             {% block content %}{% endblock %}
                         </div>
                     </div>
