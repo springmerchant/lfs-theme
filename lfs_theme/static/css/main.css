@@ -4,6 +4,7 @@ body {
     color: #58585a;
     font-family: Verdana, "MS Trebuchet", sans-serif;
     font-size: 12px;
+	 background: url(../img/background.png) repeat-x #fff;
 }
 
 a,
