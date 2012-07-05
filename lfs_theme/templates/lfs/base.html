@@ -127,19 +127,19 @@
         </div>
 
         <div id="content">
-		{% slots_information %}
-			{% block wrapper %}
-				{% block left-slot-wrapper %}
-                        {% if SlotLeft %}
-                            <div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span3">
-                                    {% block left-slot %}
-                                        {% lfs_portlet_slot 'Left' %}
-                                    {% endblock %}
+			<div class="container-fluid">
+			{% slots_information %}
+				{% block wrapper %}
+					{% block left-slot-wrapper %}
+							{% if SlotLeft %}
+                            
+									<div class="row-fluid">
+										<div class="span2">
+										{% block left-slot %}
+											{% lfs_portlet_slot 'Left' %}
+										{% endblock %}
+										</div>
 									</div>
-								</div>
-                            </div>
                         {% endif %}
                     {% endblock %}
 				
