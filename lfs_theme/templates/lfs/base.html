@@ -128,18 +128,16 @@
 
         <div id="content">
 			<div class="container-fluid">
+				<div class="row-fluid">
 			{% slots_information %}
 				{% block wrapper %}
 					{% block left-slot-wrapper %}
 							{% if SlotLeft %}
-                            
-									<div class="row-fluid">
 										<div class="span2">
 										{% block left-slot %}
 											{% lfs_portlet_slot 'Left' %}
 										{% endblock %}
 										</div>
-									</div>
                         {% endif %}
                     {% endblock %}
 				
@@ -182,7 +180,8 @@
 							</div><!--/span-->
 						  </div><!--/row-->
 						</div><!--/span-->
-					  </div><!--/row-->
+					  </div>
+			</div><!--/row-->
 
 					  <hr>
 
