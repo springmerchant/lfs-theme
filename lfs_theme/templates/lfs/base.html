@@ -139,19 +139,19 @@
 				
 
 						
-						<div class="span9">
+						<div class="span10">
 							<div id="breadcrumbs">
 								{% block breadcrumbs %}{% endblock %}	
 							</div>
 						  
 						 <div class="{{ content_class }}">
-                        <div class="middle-slot">
+                        <div class="span9">
                             {% block content %}{% endblock %}
                         </div>
                     </div>
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
-                            <div class="span3">
+                            <div class="span2">
                                 <div class="right-slot">
                                     {% block right-slot %}
                                         {% lfs_portlet_slot 'Right' %}
