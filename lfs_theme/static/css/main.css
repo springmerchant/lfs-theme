@@ -479,9 +479,10 @@ div.product-quantity {
 }
 
 .sorting {
-    background: url(../img/portlet_header_bg.jpg) no-repeat right;
     text-align: right;
     padding-right: 5px;
+	width: 250px;
+	float: right;
 }
 
 .lfs-pagination a{

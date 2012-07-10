@@ -3,7 +3,7 @@
     <form action="{% url lfs_catalog_set_sorting %}"
           method="post">
         {% csrf_token %}
-        <select name="sorting"
+        <select name="sorting control-group"
                 onchange="this.form.submit()">
             <option value="price"
                 {% ifequal "price" current %}selected="selected"{% endifequal %}>{% trans 'Price ascending' %}</option>
