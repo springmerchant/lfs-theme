@@ -335,6 +335,7 @@ table.search-results {
 
 #tabs {
 	background: -moz-linear-gradient(center top , #FFFFFF, #e3eaf8);
+	background: -webkit-linear-gradient(top, white, #e3eaf8);
 	height: 34px;
 	box-shadow: 1px 1px 1px #ddd;
 	padding-left: 10px;
