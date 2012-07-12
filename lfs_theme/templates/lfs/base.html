@@ -115,7 +115,7 @@
 	<!-- tabs end -->
 
 	<!--Main content -->
-
+		<div id="content">
 			<div class="container-fluid">
 				<div class="row-fluid">
 			{% slots_information %}
@@ -133,12 +133,12 @@
 
 						
 						
-							<div id="breadcrumbs">
+							<div id="breadcrumbs" class="span10 offset10">
 								{% block breadcrumbs %}{% endblock %}	
 							</div>
 						  
 						 <!-- <div class="{{ content_class }}"> -->
-                        <div class="span9">
+                        <div class="span8">
                             {% block content %}{% endblock %}
                         </div>
                     <!-- </div> -->
@@ -166,7 +166,7 @@
 			{% endblock %}
 					</div>		
 		
-		
+		</div>
 		
 		
 		
