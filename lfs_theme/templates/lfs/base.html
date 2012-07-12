@@ -130,60 +130,30 @@
                         {% endif %}
                     {% endblock %}
 				
-
-						
-						
-							<div id="breadcrumbs" class="span10 offset10">
-								{% block breadcrumbs %}{% endblock %}	
-							</div>
+					<div id="breadcrumbs" class="span10 offset10">
+						{% block breadcrumbs %}{% endblock %}	
+					</div>
 						  
-						 <!-- <div class="{{ content_class }}"> -->
-                        <div class="span8">
-                            {% block content %}{% endblock %}
-                        </div>
+					<!-- <div class="{{ content_class }}"> -->
+					<div class="span8">
+						{% block content %}{% endblock %}
+					</div>
                     <!-- </div> -->
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
-                            <div class="span2">
-                                <div class="right-slot">
-                                    {% block right-slot %}
-                                        {% lfs_portlet_slot 'Right' %}
-                                    {% endblock %}
-                                </div>
-                            </div>
+					<div class="span2">
+						<div class="right-slot">
+							{% block right-slot %}
+								{% lfs_portlet_slot 'Right' %}
+							{% endblock %}
+						</div>
+					</div>
                         {% endif %}
                     {% endblock %} 
 						  
-						</div>
-					 
-			</div><!--/row-->
-
-					  <hr>
-
-					  <footer>
-						<p>&copy; Company 2012</p>
-					  </footer>
-			{% endblock %}
-					</div>		
-		
+			</div>	 
 		</div>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
         <div id="footer">
             <div class="container">
                 {% block footer %}
