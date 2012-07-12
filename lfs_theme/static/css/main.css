@@ -337,6 +337,7 @@ table.search-results {
 	background: #ffffff;
 	height: 34px;
 	box-shadow: 1px 1px 1px #ddd;
+	padding-left: 10px;
 }
 
 .tabs {
