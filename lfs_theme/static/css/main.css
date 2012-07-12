@@ -322,13 +322,15 @@ table.search-results {
 }
 
 #livesearch-result {
-    position: absolute; right: 0;
+    position: absolute;
     display:none;
     z-index: 1000;
     background-color: white;
     border: 1px solid #dfd7d3;
     width:500px;
     padding: 5px;
+	top: 70px;
+	right: 20px;
 }
 
 /* Tabs */
