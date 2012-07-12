@@ -137,7 +137,7 @@
 					<!-- <div class="{{ content_class }}"> -->
 					<div class="span8">
 						{% block content %}{% endblock %}
-					</div>
+					
 					{% block center-slot-wrapper %}
 							{% if SlotCenter %}
 										<div class="span8">
@@ -147,6 +147,7 @@
 										</div>
                         {% endif %}
                     {% endblock %}
+					</div>
                     <!-- </div> -->
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
