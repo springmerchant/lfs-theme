@@ -43,8 +43,8 @@
 
     </head>
     <body class="{% block section %}lfs{% endblock %}">
-	
-	
+	<div class="container">
+	<!-- header begins -->
 	<div class="row">
 		{% block header %}
 		<div class="span4">
@@ -53,9 +53,9 @@
 			</a>
 		</div>
 		<div class="span4 offset4">
-				<div class="btn-group pull-right">
-								<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								  <i class="icon-user"></i> {% if user.is_authenticated %}
+			<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="icon-user"></i> {% if user.is_authenticated %}
                             {% if user.first_name %}
                                 <span>{{ user.first_name }} {{user.last_name}}</span>
                             {% else %}
@@ -91,33 +91,21 @@
                         {% endif %}
 
 								</ul>
-					</div>
-					<form id="search-form"
-                              action="{% url lfs_search %}"
-                              autocomplete="off">
-                            <input type="hidden" name="livesearch" value="1" />
-                            <input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}" />
-                            <input type="submit"
-                                   value="{% trans 'Go!' %}" class="btn"/>
-                    </form>
-		
+			</div>
+			<form id="search-form" action="{% url lfs_search %}" autocomplete="off">
+				<input type="hidden" name="livesearch" value="1" />
+				<input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}" />
+				<input type="submit" value="{% trans 'Go!' %}" class="btn"/>
+			</form>
 		</div>
 		<div class="container livesearch-wrapper">
                  <div id="livesearch-result"></div>
 		</div>
 		 {% endblock %}
     </div>
+	<!-- header ends -->
 	
-	
-        <div id="header">
-            <div class="container">
-               
-
-					
-               
-            </div>
-            
-        </div>
+        
 
         <div id="tabs">
             <div class="container">
@@ -231,6 +219,6 @@
             {% google_analytics_tracking %}
         {% endblock %}
         {% block google-analytics-ecommerce %}{% endblock %}
-
+	</div>
     </body>
 </html>
