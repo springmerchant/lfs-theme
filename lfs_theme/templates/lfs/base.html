@@ -135,9 +135,16 @@
 					</div>
 						  
 					<!-- <div class="{{ content_class }}"> -->
-					<div class="span8">
-						{% block content %}{% endblock %}
-					</div>
+					{% block center-slot-wrapper %}
+							{% if SlotCenter %}
+										<div class="span8">
+										{% block center-slot %}
+											{% lfs_portlet_slot 'Center' %}
+											{% block content %}{% endblock %}
+										{% endblock %}
+										</div>
+                        {% endif %}
+                    {% endblock %}
                     <!-- </div> -->
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
