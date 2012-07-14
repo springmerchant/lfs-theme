@@ -27,7 +27,7 @@
                     </div>
                     <div>
                         <div class="product-title">{{ product.name }}</div>
-                        <div class="product-description">{{ product.obj.get_short_description|safe|truncatewords_html:20 }}</div>
+                        <div class="product-description">{{ product.obj.get_short_description|safe|truncatewords_html:60 }}</div>
                     </div>
 
                     {% category_product_prices_gross product.obj.id %}
