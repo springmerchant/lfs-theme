@@ -19,9 +19,9 @@
                     onclick="window.location='{% url lfs.catalog.views.product_view product.slug %}'">
                     <div class="product-image">
                         <a href="{% url lfs.catalog.views.product_view product.slug %}">
-                            {% if product.image.url_100x100 %}
+                            {% if product.image.url_200x200 %}
                                 <img alt="{{ product.name }}"
-                                     src="{{ product.image.url_100x100 }}" />
+                                     src="{{ product.image.url_200x200 }}" />
                             {% endif %}
                         </a>
                     </div>
