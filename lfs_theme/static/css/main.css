@@ -508,8 +508,8 @@ a.current, span.current {
 .category .product-image {
     margin-right: 40px;
     padding-bottom: 10px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     float: left;
 }
 
