@@ -1,6 +1,6 @@
 {% load i18n %}
 {% if pagination.total_pages > 1 %}
-<div class="pagination">
+<div class="pager">
     <ul>
 	{% if pagination.first_page %}
 	<li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.first_page }}{{ pagination.getvars }}">{% trans "First page" %}</a></li>
