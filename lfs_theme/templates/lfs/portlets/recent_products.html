@@ -12,7 +12,7 @@
                 <a href="{{ product.get_absolute_url }}">
                     {{ product.get_name }}
                 </a>
-            </div>
+            
 			<div class="product-image">
                                 <a href="{{ product.get_absolute_url }}">
                                     {% if product.get_image %}
@@ -24,4 +24,5 @@
             {% endfor %}
         </div>
     </div>
+	</div>
 {% endif %}
