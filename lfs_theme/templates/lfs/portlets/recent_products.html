@@ -15,7 +15,7 @@
             </div>
 			<div class="product-image">
                                 <a href="{{ product.get_absolute_url }}">
-                                    {% if product.get_image %}
+                                     {% if product.image.url_164x164 %}
                                         <img alt="{{ product.get_name }}"
                                             src="{{ product.get_image.image.url_164x164 }}" />
                                     {% endif %}
