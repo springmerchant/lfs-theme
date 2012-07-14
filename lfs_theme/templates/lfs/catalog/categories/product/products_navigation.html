@@ -11,7 +11,7 @@
 	
 	{% for p in pagination.page_range %}
       {% if p == pagination.current_page %}
-        <li class="active">{{ p }}</li>
+        <li class="active"><a href="#">{{ p }}</a></li>
       {% else %}
         <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ p }}{{ pagination.getvars }}">{{ p }}</a></li>
       {% endif %}
@@ -25,7 +25,7 @@
     {% endif %}
 	{% if pagination.total_text %}
         <li class="total-text">
-            ({{ pagination.total_text }})
+            <a href="#">({{ pagination.total_text }})</a>
         </li>
     {% endif %}
     </ul>
