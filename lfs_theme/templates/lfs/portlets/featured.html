@@ -9,6 +9,14 @@
         <div class="portlet-body">
             {% if not slideshow %}
                 {% for product in products %}
+				<div class="product-image">
+                        <a href="{% url lfs.catalog.views.product_view product.slug %}">
+                            {% if product.image.url_200x200 %}
+                                <img alt="{{ product.name }}"
+                                     src="{{ product.image.url_200x200 }}" />
+                            {% endif %}
+                        </a>
+                    </div>
                 <div class="portlet-item {% if forloop.last %}last{% endif %}">
                     <a href="{{ product.get_absolute_url }}">
                         {{ product.get_name }}
