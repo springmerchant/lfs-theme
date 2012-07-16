@@ -1082,11 +1082,11 @@ ___________________________________________________________________________ */
 .cart-portlet .portlet-header,
 .cart-portlet .portlet-header a,
 .cart-portlet .portlet-header a:visited {
-    color: white;
+    
 }
 
 .cart-portlet .portlet-header img {
-    position: absolute; right: 8px;
+    position: absolute; right: 8px; top: -17px;
 }
 
 .cart-portlet .portlet-body {
