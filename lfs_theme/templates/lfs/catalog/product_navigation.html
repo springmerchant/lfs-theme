@@ -5,13 +5,13 @@
         {% if previous %}
             <li><a href="{% url lfs_product previous %}">&lt;&lt; {% trans 'Previous product' %}</a></li>
         {% else %}
-            <li>&lt;&lt; {% trans 'Previous product' %}</li>
+            <li class="active"><a>&lt;&lt; {% trans 'Previous product' %}</a></li>
         {% endif %}
-        <li>- {{ current }} {% trans 'of' %} {{ total }} -</li>
+        <li class="active"><a>- {{ current }} {% trans 'of' %} {{ total }} -</a></li>
         {% if next %}
             <li><a href="{% url lfs_product next %}">{% trans 'Next product' %} &gt;&gt;</a></li>
         {% else %}
-            <li>{% trans 'Next product' %} &gt;&gt;</li>
+            <li class="active"><a>{% trans 'Next product' %} &gt;&gt;</a></li>
         {% endif %}
     </ul>
 	{% endif %}
