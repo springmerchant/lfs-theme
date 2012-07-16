@@ -720,11 +720,10 @@ ___________________________________________________________________________ */
 }
 
 .overview {
-    text-align: right;
     padding: 10px 30px 10px 0;
     font-size: 80%;
     font-weight: bold;
-	float: right;
+	float: left;
 	width: 250px;
 }
 
