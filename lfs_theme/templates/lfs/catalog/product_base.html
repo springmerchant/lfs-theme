@@ -29,11 +29,11 @@
 
     {{ product.static_block.html|safe }}
 
-    <div class="row">
+    <div class="row-fluid">
 		<div class="span4">
 			{% product_navigation product %}
 		</div>
-		<div class="span4 offset4"
+		<div class="span4">
 			<div class="overview">
 				{% come_from_page product %}
 				<a href="{{ come_from_page.get_absolute_url }}" class="btn btn-small">
