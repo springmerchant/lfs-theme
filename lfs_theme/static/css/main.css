@@ -1090,17 +1090,19 @@ ___________________________________________________________________________ */
 }
 
 .cart-portlet .portlet-body {
-    padding: 16px 10px 10px 10px;
+    padding: 26px 10px 20px 10px;
     border: 1px solid #dfd7d3;
+	
 }
 
 .cart-portlet .price {
     font-weight: bold;
     text-align: right;
+	padding-top: 5px;
 }
 
 .cart-portlet .portlet-footer {
-    background: #eae5e2;
+    background: #FDFD83;
     border: 1px solid #dfd7d3;
     border-top: none;
     padding: 5px 10px;
