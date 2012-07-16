@@ -1038,6 +1038,8 @@ ___________________________________________________________________________ */
     padding-left: 25px;
     text-decoration: none;
     background: url("../img/portlet-bullet.gif") left center no-repeat;
+	font-size: 1.2em;
+	font-weight: normal;
 }
 
 .portlet .for-sale-standard-price {
