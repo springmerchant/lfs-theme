@@ -1,17 +1,17 @@
 {% load i18n %}
-<div class="pager">
+<div class="pagination">
     {% if display %}
 	<ul>
         {% if previous %}
             <li><a href="{% url lfs_product previous %}">&lt;&lt; {% trans 'Previous product' %}</a></li>
         {% else %}
-            <li class="active"><a>&lt;&lt; {% trans 'Previous product' %}</a></li>
+            <li class="disabled"><a href="#">&lt;&lt; {% trans 'Previous product' %}</a></li>
         {% endif %}
-        <li class="active"><a>- {{ current }} {% trans 'of' %} {{ total }} -</a></li>
+        <li class="disabled"><a href="#">- {{ current }} {% trans 'of' %} {{ total }} -</a></li>
         {% if next %}
             <li><a href="{% url lfs_product next %}">{% trans 'Next product' %} &gt;&gt;</a></li>
         {% else %}
-            <li class="active"><a>{% trans 'Next product' %} &gt;&gt;</a></li>
+            <li class="disabled"><a href="#">{% trans 'Next product' %} &gt;&gt;</a></li>
         {% endif %}
     </ul>
 	{% endif %}
