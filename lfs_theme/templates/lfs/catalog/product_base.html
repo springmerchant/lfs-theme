@@ -29,14 +29,19 @@
 
     {{ product.static_block.html|safe }}
 
-    {% product_navigation product %}
-
-    <div class="overview">
-        {% come_from_page product %}
-        <a href="{{ come_from_page.get_absolute_url }}" class="btn btn-small">
-            {% trans 'Back to overview' %}
-        </a>
-    </div>
+    <div class="row">
+		<div class="span4">
+			{% product_navigation product %}
+		</div>
+		<div class="span4 offset4"
+			<div class="overview">
+				{% come_from_page product %}
+				<a href="{{ come_from_page.get_absolute_url }}" class="btn btn-small">
+					{% trans 'Back to overview' %}
+				</a>
+			</div>
+		</div>
+	</div>	
 
     <div id="product-inline">
         {{ product_inline|safe }}
