@@ -8,6 +8,8 @@
       method="post">
     {% csrf_token %}
 
+<div class="row-fluid">	
+	<div class="span6">
     {# Images #}
     <div class="product-images">
         <div class="main-image">
@@ -47,7 +49,8 @@
 
     {% shipping product %}
     {% average_for_instance product %}
-
+	</div>
+	<div class="span6">
     {# Prices #}
     <div class="prices">
         {% if for_sale %}
@@ -194,9 +197,9 @@
                 onclick="window.location='{% url lfs_contact_form %}'; return false"
                 name="">{% trans 'Send request' %}</button>
     {% endif %}
-
-    
-
+	</div>
+</div>    
+	
     {# Variants #}
     {% if product.is_variant %}
         <div class="variants">
