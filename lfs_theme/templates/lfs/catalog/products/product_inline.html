@@ -278,7 +278,7 @@
 	<ul class="nav nav-tabs">
 	 {% if attachments %}
 	 {# Attachments #}
-	<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+	<li class="active"><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
 	{# Accessories #}
 	<li><a href="#accessories" data-toggle="tab"> {% trans 'Accessories' %} </a> </li>
 	 {% endif %}
@@ -286,7 +286,7 @@
 	</ul>
 	<div class="tab-content">
 		{% if attachments %}
-		<div id="attachments" class="tab-pane">
+		<div id="attachments" class="tab-pane active">
 			{% for attachment in attachments %}
             <div class="item">
                 <div class="title">
