@@ -274,12 +274,18 @@
             {% endif %}
         </div>
     {% endif %}
-
-    {# Attachments #}
-    {% if attachments %}
-        <div class="attachments">
-            <h1 class="section">{% trans 'Attachments' %}</h1>
-            {% for attachment in attachments %}
+	
+	<ul class="nav nav-tabs">
+	 {% if attachments %}
+	 {# Attachments #}
+	<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+	 {% endif %}
+	
+	</ul>
+	<div class="tab-content">
+		{% if attachments %}
+		<div id="attachments" class="tab-pane">
+			{% for attachment in attachments %}
             <div class="item">
                 <div class="title">
                     <a title="{{ attachment.title}}" href="{{ attachment.get_url }}">
@@ -293,8 +299,18 @@
                 {% endif %}
             </div>
             {% endfor %}
+		</div>
+		{% endif %}
+		
+	</div>
+
+    
+   
+        <div class="attachments">
+            <h1 class="section"></h1>
+            
         </div>
-    {% endif %}
+   
 
     {# Accessories #}
     {% if product_accessories %}
