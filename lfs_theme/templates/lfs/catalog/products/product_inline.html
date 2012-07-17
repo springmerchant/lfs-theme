@@ -195,9 +195,7 @@
                 name="">{% trans 'Send request' %}</button>
     {% endif %}
 
-    <p class="product-description">
-        {{ product.get_description|safe}}
-    </p>
+    
 
     {# Variants #}
     {% if product.is_variant %}
@@ -276,15 +274,24 @@
     {% endif %}
 	
 	<ul class="nav nav-tabs">
+	<li class="active"><a href="#description" data-toggle="tab"> Description </a> </li>
 	 {% if attachments %}
 	 {# Attachments #}
-	<li class="active"><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+	<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+	 {% endif %}
+	  {% if product_accessories %}
 	{# Accessories #}
 	<li><a href="#accessories" data-toggle="tab"> {% trans 'Accessories' %} </a> </li>
-	 {% endif %}
+	{% endif %}
+	
 	
 	</ul>
 	<div class="tab-content">
+		<div id="description" class="tab-pane active">
+			<p class="product-description">
+			{{ product.get_description|safe}}
+			</p>
+		</div>
 		{% if attachments %}
 		<div id="attachments" class="tab-pane active">
 			{% for attachment in attachments %}
