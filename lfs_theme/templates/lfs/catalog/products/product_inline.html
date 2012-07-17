@@ -279,6 +279,8 @@
 	 {% if attachments %}
 	 {# Attachments #}
 	<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+	{# Accessories #}
+	<li><a href="#accessories" data-toggle="tab"> {% trans 'Accessories' %} </a> </li>
 	 {% endif %}
 	
 	</ul>
@@ -302,20 +304,8 @@
 		</div>
 		{% endif %}
 		
-	</div>
-
-    
-   
-        <div class="attachments">
-            <h1 class="section"></h1>
-            
-        </div>
-   
-
-    {# Accessories #}
-    {% if product_accessories %}
-        <div class="accessories">
-            <h1 class="section">{% trans 'Accessories' %}</h1>
+		{% if product_accessories %}
+        <div id="accessories" class="tab-pane">
             <table class="product-accessories lfs-default">
                 <tr>
                     <th></th>
@@ -354,6 +344,17 @@
             </table>
         </div>
     {% endif %}
+		
+		
+	</div>
+
+    
+   
+       
+   
+
+    
+    
 
     <input type="hidden"
            name="product_id"
