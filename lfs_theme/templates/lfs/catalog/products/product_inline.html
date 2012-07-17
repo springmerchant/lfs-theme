@@ -195,52 +195,13 @@
                 name="">{% trans 'Send request' %}</button>
     {% endif %}
 
-	
-<div class="row-fluid">
-	<div class="span12">
-	<ul class="nav nav-tabs">
-		<li class="active"><a href="#description" data-toggle="tab"> {% trans 'Description' %} </a> </li>
-		 {% if attachments %}
-		 {# Attachments #}
-		<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
-		 {% endif %}
-		 {# Variants #}
-		 {% if product.is_variant %}
-		  <li><a href="#variants" data-toggle="tab">  {% trans 'Variants' %} </a> </li>
-		 {% endif %}
-		  {% if product_accessories %}
-		{# Accessories #}
-		<li><a href="#accessories" data-toggle="tab"> {% trans 'Accessories' %} </a> </li>
-		{% endif %}
-	</ul>
-	
-	<div class="tab-content">
-		<div id="description" class="tab-pane active">
-			<p class="product-description">
-			{{ product.get_description|safe}}
-			</p>
-		</div>
-		{% if attachments %}
-		<div id="attachments" class="tab-pane">
-			{% for attachment in attachments %}
-            <div class="item">
-                <div class="title">
-                    <a title="{{ attachment.title}}" href="{{ attachment.get_url }}">
-                        {{ attachment.title}}
-                    </a>
-                </div>
-                {% if attachment.description %}
-                <div class="description">
-                    {{ attachment.description }}
-                </div>
-                {% endif %}
-            </div>
-            {% endfor %}
-		</div>
-		{% endif %}
-		{% if product.is_variant %}
-		<div id="variants" class="tab-pane">
-			{# List #}
+    
+
+    {# Variants #}
+    {% if product.is_variant %}
+        <div class="variants">
+            <h1 class="section">{% trans 'Variants' %}</h1>
+            {# List #}
             {% if display_variants_list %}
                 <table class="product-variants lfs-default"
                        data="{% url lfs_select_variant %}">
@@ -309,8 +270,47 @@
                     {% endfor %}
                 </div>
             {% endif %}
+        </div>
+    {% endif %}
+	
+<div class="row-fluid">
+	<div class="span12">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#description" data-toggle="tab"> {% trans 'Description' %} </a> </li>
+		 {% if attachments %}
+		 {# Attachments #}
+		<li><a href="#attachments" data-toggle="tab"> {% trans 'Attachments' %} </a> </li>
+		 {% endif %}
+		  {% if product_accessories %}
+		{# Accessories #}
+		<li><a href="#accessories" data-toggle="tab"> {% trans 'Accessories' %} </a> </li>
+		{% endif %}
+	</ul>
+	<div class="tab-content">
+		<div id="description" class="tab-pane active">
+			<p class="product-description">
+			{{ product.get_description|safe}}
+			</p>
+		</div>
+		{% if attachments %}
+		<div id="attachments" class="tab-pane">
+			{% for attachment in attachments %}
+            <div class="item">
+                <div class="title">
+                    <a title="{{ attachment.title}}" href="{{ attachment.get_url }}">
+                        {{ attachment.title}}
+                    </a>
+                </div>
+                {% if attachment.description %}
+                <div class="description">
+                    {{ attachment.description }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
 		</div>
 		{% endif %}
+		
 		{% if product_accessories %}
         <div id="accessories" class="tab-pane">
             <table class="product-accessories lfs-default">
