@@ -700,6 +700,9 @@ ___________________________________________________________________________ */
     font-size: 200%;
     font-weight: bold;
     margin: 0 0 2px 0;
+	color: #ff0000;
+	text-shadow: 0.05em 0.01em 0.05em #333333;
+	padding: 3px;
 }
 
 .product .for-sale-standard-price {
