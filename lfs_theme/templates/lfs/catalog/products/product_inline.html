@@ -55,17 +55,19 @@
     <div class="prices">
         {% if for_sale %}
             <div>
-                <span class="for-sale-standard-price" nowrap="nowrap">
-                    <span class="for-sale-standard-price-value">
-                        {{ product|get_standard_price_gross:request|currency:request }}
-                    </span>
-                    * {% if price_unit %}/ {{ price_unit }}{% endif %}</span>
-                <span class="for-sale-price" nowrap="nowrap">
+				<span class="for-sale-price" nowrap="nowrap">
                     <span class="for-sale-price-value">
                         {{ product|get_for_sale_price_gross:request|currency:request }}
                     </span>
                     * {% if price_unit %}/ {{ price_unit }}{% endif %}
                 </span>
+				<br />
+                <span class="for-sale-standard-price" nowrap="nowrap">
+                    <span class="for-sale-standard-price-value">
+                        {{ product|get_standard_price_gross:request|currency:request }}
+                    </span>
+                    * {% if price_unit %}/ {{ price_unit }}{% endif %}</span>
+                
             </div>
             {% if product.get_active_base_price %}
                 <div class="base-price">
