@@ -475,8 +475,9 @@ div.product-quantity {
 .packing-result {
     clear: both;
     float: right;
-    font-size: 89%;
+    font-size: 70%;
     margin: 2px 10px 20px 0;
+	color: #aaa;
 }
 
 .packing-unit {
