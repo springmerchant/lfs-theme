@@ -1,14 +1,17 @@
 {% load i18n lfs_tags %}
 
 {% if cart_items %}
-	<div class="span12">
+	
 		 {% if voucher_number and voucher_message %}
-        <div  class="alert alert-info">
-            {{ voucher_message }}
-        </span>
+		 <div class="row-fluid">
+			<div class="span12">
+				<div  class="alert alert-info">
+				{{ voucher_message }}
+				</div>
+			</div>
+		</div>
 		{% endif %}
-	</div>
-	</div>
+	
 	<div class="span2">
     <div class="portlet-header">
         {% trans "Voucher" %}
