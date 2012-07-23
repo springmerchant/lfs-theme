@@ -1,7 +1,7 @@
 <fieldset>
 {% for field in form %}
     <div class="control-group">
-		<label for="input01" class="control-label">{{ field.label_tag }}:</label>
+		<label for="input01" class="control-label">{{ field.label_tag }}</label>
         
         {% if field.errors %}
             <div class="error">

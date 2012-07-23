@@ -21,7 +21,7 @@
 
     <form action="{% url lfs_contact_form %}"
           method="post"
-		  class="form-horizontal">
+		  class="form-vertical">
 
         {% csrf_token %}
         {% include "lfs/shop/lfs_form.html" %}
