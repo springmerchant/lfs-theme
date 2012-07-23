@@ -5,8 +5,8 @@
         
         {% if field.errors %}
             <div class="error">
-                {{ field.errors }}
-				<span class="help-inline">{{ field }}</span>                
+                {{ field }}
+				<span class="help-inline">{{ field.errors }}</span>     
             </div>
         {% else %}
             <div class="input-xlarge">
