@@ -1,8 +1,7 @@
+<fieldset>
 {% for field in form %}
-    <div class="field">
-        <div class="label">
-            {{ field.label_tag }}:
-        </div>
+    <div class="control-group">
+		<label for="input01" class="control-label">{{ field.label_tag }}:</label>
         
         {% if field.errors %}
             <div class="error">
@@ -10,9 +9,10 @@
                 {{ field }}
             </div>
         {% else %}
-            <div>
+            <div class="input-xlarge">
                 {{ field }}
             </div>
         {% endif %}
     </div>
 {% endfor %}
+</fieldset>
