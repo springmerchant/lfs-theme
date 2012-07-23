@@ -1,8 +1,5 @@
 {% load i18n lfs_tags %}
-
-{% if cart_items %}
-	
-		 {% if voucher_number and voucher_message %}
+{% if voucher_number and voucher_message %}
 		 <div class="row-fluid">
 			<div class="span12">
 				<div  class="alert alert-info">
@@ -11,7 +8,8 @@
 			</div>
 		</div>
 		{% endif %}
-	
+		
+{% if cart_items %}
 	<div class="span2">
     <div class="portlet-header">
         {% trans "Voucher" %}
