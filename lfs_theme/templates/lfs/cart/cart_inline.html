@@ -1,6 +1,7 @@
 {% load i18n lfs_tags %}
 
 {% if cart_items %}
+	<div class="span2">
     <h1 class="first-heading">
         {% trans "Voucher" %}
     </h1>
@@ -16,7 +17,8 @@
             {{ voucher_message }}
         </span>
     {% endif %}
-
+	</div>
+	<div class="span10">
     <h1 class="title">
         {% trans 'Your Cart' %}
     </h1>
@@ -296,6 +298,7 @@
             </tr>
         </table>
     </form>
+	</div>
 {% else %}
     <h1 class="title">
         {% trans 'Your Cart is empty' %}
