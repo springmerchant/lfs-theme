@@ -20,13 +20,14 @@
     </p>
 
     <form action="{% url lfs_contact_form %}"
-          method="post">
+          method="post"
+		  class="form-horizontal">
 
         {% csrf_token %}
         {% include "lfs/shop/lfs_form.html" %}
 
-        <div class="buttons">
-            <button class="button emphasized left"
+        <div class="form-actions">
+            <button class="btn btn-large btn-success"
                    type="submit">{% trans 'Send' %}</button>
         </div>
     </form>
