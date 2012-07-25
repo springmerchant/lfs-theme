@@ -24,7 +24,7 @@
         <div class="description">
             {% trans 'If you are already customer you can login. Your adress data will then already known.' %}
         </div>
-
+		<div class="form">
         <form class="form-horizontal"
               action="{% url lfs_checkout_login %}"
               method="post">
@@ -48,6 +48,7 @@
 			</div>
 
         </form>
+		</div>
 
 		</div>
 		<div class="span4">
@@ -58,7 +59,7 @@
             <div class="description">
                 {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
             </div>
-
+			<div class="form">
             <form action="{% url lfs_checkout_login %}"
                   method="post" class="form-horizontal">
                     {% csrf_token %}
@@ -75,11 +76,12 @@
                            name="next"
                            value="{% url lfs_checkout %}" />
 
-                    <button class="btn btn-large btn-info"
+                    <button class="btn btn-large"
                             type="submit"
                             href="{% url lfs_checkout %}">{% trans "Register" %}</button>
 					</div>
             </form>
+			</div>
 
     {% endif %}
 		</div>
@@ -92,13 +94,12 @@
                 {% trans 'You can also checkout without login or registration.' %}
             </div>
 
-            &nbsp;
-			<div class="form-actions">
-            <a class="btn btn-large btn-success"
+            <div class="form">&nbsp;</div>
+
+            <a class="btn btn-large"
                href="{% url lfs_checkout %}">
                {% trans 'Checkout' %}
             </a>
-			</div>
         
     {% endif %}
 		</div>
