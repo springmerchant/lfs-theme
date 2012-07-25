@@ -18,7 +18,7 @@
     </h1>
 	<div class="row-fluid">
 		<div class="span4">
-			<div class="login">
+
         <div class="portlet-header">{% trans 'Login' %}</div>
 
         <div class="description">
@@ -54,11 +54,11 @@
                     href="{% url lfs_checkout %}">{% trans 'Login' %}</button>
 
         </form>
-		</div>
+
 		</div>
 		<div class="span4">
 			{% if not ANON_ONLY %}
-        <div class="register">
+
             <div class="portlet-header">{% trans 'Register' %}</div>
 
             <div class="description">
@@ -86,12 +86,11 @@
                             href="{% url lfs_checkout %}">{% trans "Register" %}</button>
             </form>
 
-        </div>
     {% endif %}
 		</div>
 		<div class="span4">
 			{% if anonymous_checkout %}
-        <div class="anonymous-checkout">
+        
 			<div class="portlet-header">{% trans 'Checkout' %}</div>
 
             <div class="description">
@@ -104,7 +103,7 @@
                href="{% url lfs_checkout %}">
                {% trans 'Checkout' %}
             </a>
-        </div>
+        
     {% endif %}
 		</div>
 	</div>
