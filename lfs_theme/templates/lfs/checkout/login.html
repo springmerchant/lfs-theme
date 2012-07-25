@@ -19,7 +19,7 @@
 	<div class="row-fluid">
 		<div class="span4">
 			<div class="login">
-        <h2 class="authenticate">{% trans 'Login' %}</h2>
+        <div class="portlet-header">{% trans 'Login' %}</div>
 
         <div class="description">
             {% trans 'If you are already customer you can login. Your adress data will then already known.' %}
@@ -59,7 +59,7 @@
 		<div class="span4">
 			{% if not ANON_ONLY %}
         <div class="register">
-            <h2 class="authenticate">{% trans 'Register' %}</h2>
+            <div class="portlet-header">{% trans 'Register' %}</div>
 
             <div class="description">
                 {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
@@ -92,7 +92,7 @@
 		<div class="span4">
 			{% if anonymous_checkout %}
         <div class="anonymous-checkout">
-            <h2 class="authenticate">{% trans 'Checkout' %}</h2>
+			<div class="portlet-header">{% trans 'Checkout' %}</div>
 
             <div class="description">
                 {% trans 'You can also checkout without login or registration.' %}
