@@ -33,7 +33,7 @@
                     {{ login_form }}
                     
                             <a href="{% url lfs_password_reset %}">{% trans 'Forgot password?' %}</a>
-			<div class="form-actions">
+			
             <input type="hidden"
                    name="action"
                    value="login" />
@@ -45,7 +45,7 @@
             <button type="submit"
                     class="btn btn-large"
                     href="{% url lfs_checkout %}">{% trans 'Login' %}</button>
-			</div>
+			
 
         </form>
 		</div>
@@ -67,7 +67,7 @@
                         <table>
                             {{ register_form }}
                         </table>
-                    <div class="form-actions">
+                    
                     <input type="hidden"
                            name="action"
                            value="register" />
@@ -76,10 +76,10 @@
                            name="next"
                            value="{% url lfs_checkout %}" />
 
-                    <button class="btn btn-large"
+                    <button class="btn btn-large btn-info"
                             type="submit"
                             href="{% url lfs_checkout %}">{% trans "Register" %}</button>
-					</div>
+					
             </form>
 			</div>
 
@@ -96,7 +96,7 @@
 
             <div class="form">&nbsp;</div>
 
-            <a class="btn btn-large"
+            <a class="btn btn-large btn-success"
                href="{% url lfs_checkout %}">
                {% trans 'Checkout' %}
             </a>
