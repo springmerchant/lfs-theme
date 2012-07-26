@@ -26,7 +26,7 @@
         <div class="description">
             {% trans 'If you are already customer you can login. Your adress data will then already known.' %}
         </div>
-        <form class="form-horizontal"
+        <form class="form-vertical"
               action="{% url lfs_checkout_login %}"
               method="post">
             {% csrf_token %}

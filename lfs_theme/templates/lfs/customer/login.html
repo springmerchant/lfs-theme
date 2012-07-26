@@ -26,7 +26,7 @@
             {% trans 'If you are already customer you can login. Your address data will be stored in your account.' %}
         </div>
 
-        <form class="form-horizontal"
+        <form class="form-vertical"
               action="{% url lfs_login %}"
               method="post">
             {% csrf_token %}
