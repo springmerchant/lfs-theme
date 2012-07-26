@@ -16,9 +16,9 @@
     <h1>
         {% trans 'Please select!' %}
     </h1>
-
-    <div class="login">
-        <h2 class="authenticate">{% trans 'Login' %}</h2>
+	<div class="row-fluid">
+		<div class="span6">
+			<h2 class="authenticate">{% trans 'Login' %}</h2>
 
         <div class="description">
             {% trans 'If you are already customer you can login. Your address data will be stored in your account.' %}
@@ -52,9 +52,9 @@
             <button type="submit"
                     class="button login-button emphasized left">{% trans 'Login' %}</button>
         </form>
-    </div>
-
-    {% if not ANON_ONLY %}
+		</div>
+		<div class="spn6">
+			{% if not ANON_ONLY %}
         <div class="register">
             <h2 class="authenticate">{% trans 'Register' %}</h2>
 
@@ -83,6 +83,12 @@
             </form>
         </div>
     {% endif %}
+		</div>
+	</div>
+
+    
+
+    
 <script type="text/javascript">
 $("#id_username").focus();
 </script>
