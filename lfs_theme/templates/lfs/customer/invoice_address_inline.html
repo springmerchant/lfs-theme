@@ -16,7 +16,7 @@
 	</div>
 	
 	<div class="control-group">
-		<label class="control-label">{{ form.invoice_company_name.label_tag }}{% if settings.LFS_INVOICE_COMPANY_NAME_REQUIRED %}*{% endif %}:</label>
+		<label class="control-label" for="{{ field.invoice_company_name.label_id }}">{{ form.invoice_company_name.label }}{% if settings.LFS_INVOICE_COMPANY_NAME_REQUIRED %}*{% endif %}:</label>
 			<div class="controls">
 			{{ form.invoice_company_name.errors }}
                 {{ form.invoice_company_name }}
