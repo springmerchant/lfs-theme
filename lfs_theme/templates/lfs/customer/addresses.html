@@ -21,13 +21,14 @@
         </div>
     {% endif %}
 
-    <div class="row-fluid">
+    
 	<form class="form-vertical"
     	  action="{% url lfs_my_addresses %}"
           method="post"
           invoice="{% url lfs_changed_invoice_country %}"
           shipping="{% url lfs_changed_shipping_country %}">
         {% csrf_token %}
+	<div class="row-fluid">
 		<div class="span6">
 			<div class="portlet-header">{% trans 'Invoice Address' %}</div>
 			{{ invoice_address_inline|safe }}
