@@ -7,24 +7,22 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{% trans 'Change your e-mail address' %}</h1>
+    <div class="page-header"><h1>{% trans 'Change your e-mail address' %}</h1></div>
     <form action="{% url lfs_my_email %}"
-          method="post">
+          method="post" class="form-horizontal">
         {% csrf_token %}
-        <table>
+        
             {{ email_form }}
-            <tr>
-                <td></td>
-                <td>
+            <div class="form-actions">
                     <input type="hidden"
                            name="action"
                            value="email" />
 
                     <input class="lfs-default"
                            type="submit"
-                           value="{% trans 'Save e-mail address' %}" />
-                </td>
-            </tr>
-        </table>
+                           value="{% trans 'Save e-mail address' %}" 
+						   class="btn btn-large" />
+                </div>
+        
     </form>
 {% endblock %}
