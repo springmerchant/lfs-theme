@@ -3,29 +3,32 @@
 {% load lfs_tags %}
 
 {% block wrapper %}
-    <div class="span-5">
-        {% block left-slot %}
-            <h1>{% trans 'My account' %}</h1>
-            <ul class="navigation-body">
-                <li>
-                    <a href="{% url lfs_my_account %}">{% trans 'Overview' %}</a>
-                </li>
-                <li>
-                    <a href="{% url lfs_my_orders %}">{% trans 'Your orders' %}</a>
-                </li>
-                <li>
-                    <a href="{% url lfs_my_password %}">{% trans 'Change password' %}</a>
-                </li>
-                <li>
-                    <a href="{% url lfs_my_email %}">{% trans 'Change e-mail' %}</a>
-                </li>
-                <li>
-                    <a href="{% url lfs_my_addresses %}">{% trans 'Change addresses' %}</a>
-                </li>
-            </ul>
-        {% endblock %}
-    </div>
-    <div class="span-19 last">
+	<div class="row-fluid">
+		<div class="span3">
+			{% block left-slot %}
+				<div class="portlet-header">{% trans 'My account' %}</div>
+				<ul class="nav nav-list">
+					<li>
+						<a href="{% url lfs_my_account %}"><i class="icon-book">{% trans 'Overview' %}</a>
+					</li>
+					<li>
+						<a href="{% url lfs_my_orders %}"><i class="icon-book">{% trans 'Your orders' %}</a>
+					</li>
+					<li>
+						<a href="{% url lfs_my_password %}"><i class="icon-book">{% trans 'Change password' %}</a>
+					</li>
+					<li>
+						<a href="{% url lfs_my_email %}"><i class="icon-book">{% trans 'Change e-mail' %}</a>
+					</li>
+					<li>
+						<a href="{% url lfs_my_addresses %}"><i class="icon-book">{% trans 'Change addresses' %}</a>
+					</li>
+				</ul>
+			{% endblock %}
+		</div>
+	
+    <div class="span9 last">
         {% block content %}{% endblock %}
     </div>
+	</div>
 {% endblock %}
