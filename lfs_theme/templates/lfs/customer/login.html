@@ -49,8 +49,8 @@
 		</div>
 		<div class="span6">
 			{% if not ANON_ONLY %}
-        <div class="register">
-            <h2 class="authenticate">{% trans 'Register' %}</h2>
+
+            <div class="portlet-header">{% trans 'Register' %}</div>
 
             <div class="description">
                 {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
@@ -76,7 +76,7 @@
                     <button type="submit"
                             class="btn btn-large btn-info">{% trans "Register" %}</button>
             </form>
-        </div>
+
     {% endif %}
 		</div>
 	</div>
