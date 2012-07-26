@@ -18,24 +18,20 @@
     </h1>
 	<div class="row-fluid">
 		<div class="span6">
-			<h2 class="authenticate">{% trans 'Login' %}</h2>
+			<div class="portlet-header">{% trans 'Login' %}</div>
 
         <div class="description">
             {% trans 'If you are already customer you can login. Your address data will be stored in your account.' %}
         </div>
 
-        <form class="authenticate"
+        <form class="form-horizontal"
               action="{% url lfs_login %}"
               method="post">
             {% csrf_token %}
 
             <div class="form">
-                <table>
                     {{ login_form }}
-                    <tr>
-                        <td></td>
-                        <td>
-                            <a href="{% url lfs_password_reset %}">{% trans 'Forgot password?' %}</a>
+                            <p><a href="{% url lfs_password_reset %}">{% trans 'Forgot password?' %}</a></p>
                         </td>
                     </tr>
                 </table>
@@ -50,13 +46,12 @@
                    value="{{ next_url }}" />
 
             <button type="submit"
-                    class="button login-button emphasized left">{% trans 'Login' %}</button>
+                    class="btn btn-large">{% trans 'Login' %}</button>
         </form>
 		</div>
 		<div class="spn6">
 			{% if not ANON_ONLY %}
-        <div class="register">
-            <h2 class="authenticate">{% trans 'Register' %}</h2>
+            <div class="portlet-header">{% trans 'Register' %}</div>
 
             <div class="description">
                 {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
@@ -79,9 +74,8 @@
                            value="{{ next_url }}" />
 
                     <button type="submit"
-                            class="button register-button emphasized left">{% trans "Register" %}</button>
+                            class="btn btn-large btn-info">{% trans "Register" %}</button>
             </form>
-        </div>
     {% endif %}
 		</div>
 	</div>
