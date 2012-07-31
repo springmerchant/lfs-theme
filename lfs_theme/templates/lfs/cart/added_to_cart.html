@@ -22,8 +22,8 @@
     </div>
 
     {% if product_accessories %}
-        <h3>{% trans 'Accessories' %}</h3>
-        <table class="accessories lfs-default">
+        <div class="page-header"><h3>{% trans 'Accessories' %}</h3></div>
+        <table class="table table-striped table-bordered">
             <tr>
                 <th>
                     {% trans 'Name' %}
@@ -67,16 +67,16 @@
         </table>
     {% endif %}
 
-    <div class="buttons">
-        <a class="button checkout-button emphasized"
+    <div class="form-actions">
+        <a class="btn btn-large btn-success"
            href="{% url lfs_checkout_dispatcher %}">
             {% trans 'Checkout' %}
         </a>
-        <a class="button cart-button"
+        <a class="btn btn-large"
            href="{% url lfs.cart.views.cart %}">
             {% trans 'Go to cart' %}
         </a>
-        <a class="button shopping-button"
+        <a class="btn btn-large btn-primary"
            href="{{ shopping_url }}">
             {% trans 'Go on shopping' %}
         </a>
