@@ -7,13 +7,13 @@
         </th>
     </tr>
     <tr>
-        <td class="label" width="25%">
+        <td  width="25%">
             {% trans 'Customer name' %}:
         </td>
         <td width="25%">
             {{ current_order.customer_firstname }} {{ current_order.customer_lastname }}
         </td>
-        <td class="label" width="25%">
+        <td  width="25%">
             {% trans 'Date' %}:
         </td>
         <td width="25%">
@@ -21,7 +21,7 @@
         </td>
     </tr>
     <tr>
-        <td class="label">
+        <td >
             {% trans 'E-mail' %}:
         </td>
         <td>
@@ -29,7 +29,7 @@
                 {{ current_order.customer_email }}
             </a>
         </td>
-        <td class="label">
+        <td >
             {% trans 'State' %}:
         </td>
         <td>
@@ -37,13 +37,13 @@
         </td>
     </tr>
     <tr>
-        <td class="label">
+        <td >
             {% trans 'Phone' %}:
         </td>
         <td>
             {{ current_order.shipping_phone }}
         </td>
-        <td class="label">
+        <td >
             {% trans 'Total' %}:
         </td>
         <td>
