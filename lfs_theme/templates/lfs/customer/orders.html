@@ -22,7 +22,8 @@
     {% else %}
         <div class="site-actions">
             <form action="{% url lfs_my_orders %}"
-                  method="post">
+                  method="post"
+				  class="form-horizontal">
                 {% csrf_token %}
                 <select name="date-filter">
                     <option value="">{% trans 'All' %}</option>
@@ -31,7 +32,8 @@
                     {% endfor %}
                 </select>
                 <input type="submit"
-                       value="{% trans 'Filter' %}">
+                       value="{% trans 'Filter' %}"
+					   class="btn">
             </form>
         </div>
 
