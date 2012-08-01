@@ -27,12 +27,15 @@
 			
 			<div class="row-fluid page-header">
 				<div class="span6">
-					 <h3>{% trans 'Invoice address' %}</h3>
+					 <div class="portlet-header">{% trans 'Invoice address' %}</div>
 				</div>
 				<div class="span6">
-					<h3>{% trans 'Shipping address' %}</h3>
-					({{ form.no_shipping }}
-					{{ form.no_shipping.label_tag }})
+					<div class="portlet-header">{% trans 'Shipping address' %}</div>
+					<label class="checkbox">
+					({{ form.no_shipping }}{{ form.no_shipping.label_tag }})
+					</label>
+					
+					
 				</div>
 			</div>
 			
