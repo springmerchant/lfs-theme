@@ -25,7 +25,7 @@
 	
 	{% for field in address_form %}
 	<div class="control-group">
-		<label class="control-label">{{ field.label_tag }}{% if field.field.required %}*{% endif %}:</label>
+		<label class="control-label" for="{{ field.label_id }}">{{ field.label }}{% if field.field.required %}*{% endif %}:</label>
 			<div class="controls">
 			{{ field.errors }}
 			{{ field }}
@@ -35,7 +35,7 @@
 	
 	 {% if request.user.is_anonymous %}
 	<div class="control-group">
-		<label class="control-label">{{ form.shipping_email.label_tag }}{% if settings.LFS_SHIPPING_EMAIL_REQUIRED %}*{% endif %}:</label>
+		<label class="control-label" for="{{ form.shipping_email.label_id }}">{{ form.shipping_email.label }}{% if settings.LFS_SHIPPING_EMAIL_REQUIRED %}*{% endif %}:</label>
 			<div class="controls">
 			{{ form.shipping_email.errors }}
 			{{ form.shipping_email }}
@@ -45,7 +45,7 @@
 	
 	{% if form.shipping_phone %}
 	<div class="control-group">
-		<label class="control-label">{{ form.shipping_phone.label_tag }}{% if settings.LFS_SHIPPING_PHONE_REQUIRED %}*{% endif %}:</label>
+		<label class="control-label" for="{{ form.shipping_phone.label_id }}">{{ form.shipping_phone.label }}{% if settings.LFS_SHIPPING_PHONE_REQUIRED %}*{% endif %}:</label>
 			<div class="controls">
 			{{ form.shipping_phone.errors }}
 			{{ form.shipping_phone }}
