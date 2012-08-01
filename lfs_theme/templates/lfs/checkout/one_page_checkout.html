@@ -65,7 +65,7 @@
             </div>
 
             {% if display_credit_card %}
-                 <table id="credit-card">
+                 <table id="credit-card" class="table table-striped table-bordered">
                      <tr>
                          <th colspan="2">
                              {% trans 'Please enter your credit card information' %}
@@ -84,13 +84,13 @@
                          </th>
                     </tr>
                      <tr>
-                         <td class="label"
+                         <td 
                              colspan="2">
                              {{ form.account_number.errors }}
                          </td>
                      </tr>
                      <tr>
-                         <td class="label">
+                         <td >
                              {{ form.credit_card_type.label_tag }}:
                          </td>
                          <td>
@@ -98,13 +98,13 @@
                          </td>
                      </tr>
                      <tr>
-                         <td class="label"
+                         <td 
                              colspan="2">
                              {{ form.credit_card_owner.errors }}
                          </td>
                      </tr>
                      <tr>
-                         <td class="label">
+                         <td >
                              {{ form.credit_card_owner.label_tag }}:
                          </td>
                          <td>
@@ -113,13 +113,13 @@
                      </tr>
 
                      <tr>
-                         <td class="label"
+                         <td 
                              colspan="2">
                              {{ form.credit_card_number.errors }}
                          </td>
                      </tr>
                      <tr>
-                         <td class="label">
+                         <td >
                              {{ form.credit_card_number.label_tag }}:
                          </td>
                          <td>
@@ -128,7 +128,7 @@
                      </tr>
 
                      <tr>
-                         <td class="label">
+                         <td >
                              <label>{% trans "Expiration date" %}:</label>
                          </td>
                          <td>
@@ -137,13 +137,13 @@
                      </tr>
 
                      <tr>
-                         <td class="label"
+                         <td 
                              colspan="2">
                              {{ form.credit_card_verification.errors }}
                          </td>
                      </tr>
                      <tr>
-                         <td class="label">
+                         <td >
                              {{ form.credit_card_verification.label_tag }}:
                          </td>
                          <td>
@@ -166,13 +166,13 @@
                         </th>
                     </tr>
                     <tr>
-                        <td class="label"
+                        <td 
                             colspan="2">
                             {{ form.account_number.errors }}
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">
+                        <td >
                             {{ form.account_number.label_tag }}:
                         </td>
                         <td>
@@ -180,13 +180,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="label"
+                        <td 
                             colspan="2">
                             {{ form.bank_identification_code.errors }}
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">
+                        <td >
                             {{ form.bank_identification_code.label_tag }}:
                         </td>
                         <td>
@@ -194,13 +194,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="label"
+                        <td 
                             colspan="2">
                             {{ form.bank_name.errors }}
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">
+                        <td >
                             {{ form.bank_name.label_tag }}:
                         </td>
                         <td>
@@ -208,13 +208,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="label"
+                        <td 
                             colspan="2">
                             {{ form.depositor.errors }}
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">
+                        <td >
                             {{ form.depositor.label_tag }}:
                         </td>
                         <td>
