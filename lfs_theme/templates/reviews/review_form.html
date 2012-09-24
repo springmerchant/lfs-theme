@@ -20,9 +20,9 @@
         {% csrf_token %}
         {% if request.user.is_anonymous %}
             <div class="control-group">
-                <label class="label">
-                    {{ form.user_name.label_tag }}:
-                </label>
+                
+                    {{ form.user_name.label_label }}:
+                
 
                 {% if form.user_name.errors %}
                     <div class="error">
@@ -37,9 +37,9 @@
             </div>
 
             <div class="control-group">
-                <label class="label">
-                    {{ form.user_email.label_tag }}:
-                </label>
+                
+                    {{ form.user_email.label_label }}:
+                
 
                 {% if form.user_email.errors %}
                     <div class="error">
@@ -54,9 +54,9 @@
             </div>
         {% endif %}
 
-        <label class="label">
-            {{ form.score.label_tag }}:
-        </label>
+        
+            {{ form.score.label_label }}:
+        
         <div class="star-rating-wrapper">
             {% if form.score.errors %}
                 <div class="field error">
@@ -77,9 +77,9 @@
             </ul>
         </div>
         <div class="control-group">
-            <label class="label">
-                {{ form.comment.label_tag }}:
-            </label>
+            
+                {{ form.comment.label_label }}:
+           
 
             {% if form.comment.errors %}
                 <div class="error">
@@ -104,17 +104,17 @@
 
         <input type="hidden"
                name="content_id"
-               value="{{ content_id }}" />
+               value="{{ content_id }}" /> 
 
         <div class="form-actions">
 		{% if show_preview %}
             <input type="submit"
                    value="{% trans 'Preview' %}" 
-				   class="btn btn-info ctn-large"/>
+				   class="btn btn-info ctn-large" />
         {% else %}
             <input type="submit"
                    value="{% trans 'Send' %}" 
-				   class="btn btn-success ctn-large"/>/>
+				   class="btn btn-success ctn-large" />
         {% endif %}
 		</div>
 
