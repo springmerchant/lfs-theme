@@ -4,8 +4,9 @@
 {% block section %}add-review {% endblock %}
 
 {% block content %}
-
-    <h1>{% trans 'Add Review' %} {% trans "for" %} {{ object.get_name }}</h1>
+	<div class="page-header">
+		<h1>{% trans 'Add Review' %} {% trans "for" %} {{ object.get_name }}</h1>
+	</div>
 
     {% if object.get_image.image %}
         <img class="image-left"
