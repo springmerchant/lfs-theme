@@ -21,7 +21,7 @@
         {% if request.user.is_anonymous %}
             <div class="control-group">
                 
-                    {{ form.user_name.label_label }}:
+                    {{ form.user_name.label_id }}:
                 
 
                 {% if form.user_name.errors %}
@@ -38,7 +38,7 @@
 
             <div class="control-group">
                 
-                    {{ form.user_email.label_label }}:
+                    {{ form.user_email.label_id }}:
                 
 
                 {% if form.user_email.errors %}
@@ -55,7 +55,7 @@
         {% endif %}
 
         
-            {{ form.score.label_label }}:
+            {{ form.score.label_id }}:
         
         <div class="star-rating-wrapper">
             {% if form.score.errors %}
@@ -78,7 +78,7 @@
         </div>
         <div class="control-group">
             
-                {{ form.comment.label_label }}:
+                {{ form.comment.label_id }}:
            
 
             {% if form.comment.errors %}
@@ -104,17 +104,17 @@
 
         <input type="hidden"
                name="content_id"
-               value="{{ content_id }}" /> 
+               value="{{ content_id }}" />
 
         <div class="form-actions">
 		{% if show_preview %}
             <input type="submit"
                    value="{% trans 'Preview' %}" 
-				   class="btn btn-info ctn-large" />
+				   class="btn btn-info btn-large"/>
         {% else %}
             <input type="submit"
                    value="{% trans 'Send' %}" 
-				   class="btn btn-success ctn-large" />
+				   class="btn btn-success btn-large"/>
         {% endif %}
 		</div>
 
