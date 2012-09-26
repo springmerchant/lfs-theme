@@ -6,12 +6,10 @@
 {% block content %}
     <h1>{% trans 'Thank you' %}</h1>
 
-    <ul>
-        <li>
-            <a href="{{ object.get_absolute_url }}">{% trans "Go to the reviewed product" %}</a>
-        </li>
-        <li>
-            <a href="{% url lfs_shop_view %}">{% trans 'Go to Shop' %}</a>
-        </li>
-    </ul>
+		<br />
+		<p>
+            <a href="{{ object.get_absolute_url }}" class="btn btn-primary"><i class="icon-share-alt icon-white"></i>&nbsp;{% trans "Go to the reviewed product" %}</a>
+       
+            <a href="{% url lfs_shop_view %}" class="btn btn-info"><i class="icon-shopping-cart icon-white"></i>&nbsp;{% trans 'Go to Shop' %}</a>
+		</p>
 {% endblock %}
