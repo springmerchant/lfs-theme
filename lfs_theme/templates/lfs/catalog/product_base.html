@@ -13,7 +13,12 @@
 {% block section %}product{% endblock %}
 
 {% block head %}
+{% if product.is_variant %}
+     <link rel="canonical" href="{{ product.parent.get_absolute_url }}" />
+{% else %}
     <link rel="canonical" href="{{ product.get_absolute_url }}" />
+{% endif %}
+
     {% if product.get_meta_keywords %}
         <meta name="keywords" content="{{ product.get_meta_keywords }}" />
     {% endif %}
