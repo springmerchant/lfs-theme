@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block head %}
+    <link rel="canonical" href="{{ page.get_absolute_url }}" />
+
     {% if page.get_meta_keywords %}
         <meta name="keywords" content="{{ page.get_meta_keywords }}" />
     {% endif %}
