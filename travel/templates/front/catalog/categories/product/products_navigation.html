@@ -1,0 +1,33 @@
+{% load i18n %}
+{% if pagination.total_pages > 1 %}
+<div class="pager">
+    <ul>
+	{% if pagination.first_page %}
+	<li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.first_page }}{{ pagination.getvars }}">{% trans "First page" %}</a></li>
+    {% endif %}
+	{% if pagination.has_prev %}
+	 <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.prev }}{{ pagination.getvars }}">{% trans "Previous page" %}</a></li>
+    {% endif %}
+	
+	{% for p in pagination.page_range %}
+      {% if p == pagination.current_page %}
+        <li class="active"><a href="#">{{ p }}</a></li>
+      {% else %}
+        <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ p }}{{ pagination.getvars }}">{{ p }}</a></li>
+      {% endif %}
+    {% endfor %}
+	{% if pagination.has_next %}
+    <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.next }}{{ pagination.getvars }}">{% trans "Next page" %}</a></li>
+    {% endif %}
+	{% if pagination.last_page %}
+    <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.last_page }}{{ pagination.getvars }}">{% trans "Last page" %}</a></li>
+    </span>
+    {% endif %}
+	{% if pagination.total_text %}
+        <li class="total-text">
+            <a href="#">({{ pagination.total_text }})</a>
+        </li>
+    {% endif %}
+    </ul>
+</div>
+{% endif %}

@@ -1,0 +1,89 @@
+{% extends "front/base.html" %}
+{% load i18n %}
+{% load lfs_tags %}
+
+{% block title %}
+    {% trans 'Login' %} - {{ block.super }}
+{% endblock %}
+
+{% block section %}customer-login{% endblock %}
+
+{% block breadcrumbs %}
+    {% breadcrumbs _("Login") %}
+{% endblock %}
+
+{% block wrapper %}
+    <div class="page-header">
+	<h1>
+        {% trans 'Please select!' %}
+    </h1>
+	</div>
+	<div class="row-fluid">
+		<div class="span6">
+			<div class="portlet-header">{% trans 'Login' %}</div>
+
+        <div class="description">
+            {% trans 'If you are already customer you can login. Your address data will be stored in your account.' %}
+        </div>
+
+        <form class="form-vertical"
+              action="{% url lfs_login %}"
+              method="post">
+            {% csrf_token %}
+
+            <div class="form">
+                    {{ login_form }}
+                            <p><a href="{% url lfs_password_reset %}">{% trans 'Forgot password?' %}</a></p>
+            </div>
+
+            <input type="hidden"
+                   name="action"
+                   value="login" />
+
+            <input type="hidden"
+                   name="next"
+                   value="{{ next_url }}" />
+
+            <button type="submit"
+                    class="btn btn-large">{% trans 'Login' %}</button>
+        </form>
+		</div>
+		<div class="span6">
+			{% if not ANON_ONLY %}
+            <div class="portlet-header">{% trans 'Register' %}</div>
+
+            <div class="description">
+                {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
+            </div>
+
+            <form action="{% url lfs_login %}"
+                  method="post">
+                    {% csrf_token %}
+                    <div class="form">
+                        <table>
+                            {{ register_form }}
+                        </table>
+                    </div>
+                    <input type="hidden"
+                           name="action"
+                           value="register" />
+
+                    <input type="hidden"
+                           name="next"
+                           value="{{ next_url }}" />
+
+                    <button type="submit"
+                            class="btn btn-large btn-info">{% trans "Register" %}</button>
+            </form>
+    {% endif %}
+		</div>
+	</div>
+
+    
+
+    
+<script type="text/javascript">
+$("#id_username").focus();
+</script>
+{% endblock %}
+
