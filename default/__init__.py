@@ -1,4 +1,4 @@
-theme = dict(name='Default',
+settings = dict(name='Default',
     image='/path/to/image.jpg',
     description='The default theme for SpringShop.'
 )
