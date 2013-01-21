@@ -1,1 +1,4 @@
-__version__ = "dev"
+theme = dict(name='Default',
+    image='/path/to/image.jpg',
+    description='The default theme for SpringShop.'
+)
