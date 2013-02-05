@@ -1,8 +1,8 @@
-{% load lfs_tags %}
+{% load crispy_forms_tags %}
 <div class="form-wrapper address">
     <div class="form">
-        {% lfs_form address_form.get_fields_before_postal %}
-        {% lfs_form postal_form %}
-        {% lfs_form address_form.get_fields_after_postal %}
+        {{ address_form.get_fields_before_postal|crispy }}
+        {{ postal_form|crispy }}
+        {{ address_form.get_fields_after_postal|crispy }}
     </div>
 </div>
