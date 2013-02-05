@@ -24,7 +24,7 @@
 		  class="form-vertical">
 
         {% csrf_token %}
-        {{ lfs_form form|crispy }}
+        {{ form|crispy }}
 
         <div class="form-actions">
             <button class="btn btn-large btn-success"
