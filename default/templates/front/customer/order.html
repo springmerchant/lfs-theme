@@ -1,4 +1,4 @@
-{% extends "lfs/customer/base.html" %}
+{% extends "front/customer/base.html" %}
 {% load i18n %}
 {% load lfs_tags %}
 
@@ -19,5 +19,5 @@
         <a href="{% url lfs_my_orders %}">{% trans "Back to overview" %}</a>
     </p>
 
-    {% include "lfs/order/lfs_order_tmpl.html" %}
+    {% include "front/order/lfs_order_tmpl.html" %}
 {% endblock %}

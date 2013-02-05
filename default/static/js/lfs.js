@@ -293,16 +293,16 @@ $(function() {
 
     $(".payment-methods").live("click", function() {
         if ($(".payment-method-type-1:checked").val() != null) {
-            $("#bank-account").slideDown("fast");
+            $("#bank-account").show();
         }
         else {
-            $("#bank-account").slideUp("fast");
+            $("#bank-account").hide();
         }
         if ($(".payment-method-type-2:checked").val() != null) {
-            $('#credit-card').slideDown("fast");
+            $('#credit-card').show();
         }
         else {
-            $('#credit-card').slideUp("fast");
+            $('#credit-card').hide();
         }
     })
 
