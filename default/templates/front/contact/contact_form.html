@@ -1,6 +1,6 @@
 {% extends "front/base.html" %}
 {% load i18n %}
-{% load lfs_tags %}
+{% load lfs_tags crispy_forms_tags %}
 
 {% block title %}
     {% trans 'Contact form' %} - {{ block.super }}
@@ -24,7 +24,7 @@
 		  class="form-vertical">
 
         {% csrf_token %}
-        {% lfs_form form %}
+        {{ lfs_form form|crispy }}
 
         <div class="form-actions">
             <button class="btn btn-large btn-success"
