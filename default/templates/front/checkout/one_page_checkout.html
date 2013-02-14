@@ -14,11 +14,11 @@
 {% block wrapper %}
     {% if checkout_form.errors %}
         <div class="alert alert-error">
-            {% trans "The operation could not be percheckout_formed because one or more errors occurred. Please see below." %}
+            {% trans "The operation could not be performed because one or more errors occurred. Please see below." %} {{ checkout_form.errors }}
         </div>
     {% endif %}
     <div>
-        <form class="checkout_form-horizontal"
+        <form class="form-horizontal"
               method="post"
               data="{% url lfs_changed_checkout %}"
               invoice="{% url lfs_changed_invoice_country %}"
