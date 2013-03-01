@@ -6,7 +6,7 @@ version = '0.8'
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
 
-setup(name='designs',
+setup(name='springshop-designs',
       version=version,
       description='Designs for SpringShop',
       long_description=README,
