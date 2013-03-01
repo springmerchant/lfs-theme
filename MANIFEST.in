@@ -1,4 +1,4 @@
 include README.txt
-recursive-include locale *
-recursive-include static *
-recursive-include templates *
+recursive-include default/locale *
+recursive-include default/static *
+recursive-include default/templates *
