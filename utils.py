@@ -1,5 +1,5 @@
 # All available designs
-AVAILABLE_DESIGNS = ['lfs_theme.travel','lfs_theme.default', 'lfs_theme.realestate']
+AVAILABLE_DESIGNS = ['springshop_designs.travel','springshop_designs.default', 'springshop_designs.realestate']
 
         
  
