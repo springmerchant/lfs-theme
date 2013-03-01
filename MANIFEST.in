@@ -1,4 +1,4 @@
 include README.txt
-recursive-include default/locale *
-recursive-include default/static *
-recursive-include default/templates *
+recursive-include /springshop_designs/default/locale *
+recursive-include /springshop_designs/default/static *
+recursive-include /springshop_designs/default/templates *
