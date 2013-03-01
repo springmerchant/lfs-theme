@@ -1,0 +1,20 @@
+{% extends "front/base.html" %}
+{% load i18n %}
+{% load lfs_tags %}
+
+{% block title %}
+    {% trans 'Cart' %} - {{ block.super }}
+{% endblock %}
+
+{% block section %}cart{% endblock %}
+
+{% block breadcrumbs %}
+    {% breadcrumbs _('Cart') %}
+{% endblock %}
+
+{% block wrapper %}
+
+    <div id="cart-inline" class="row-fluid">
+        {{cart_inline}}
+    </div>
+{% endblock %}
