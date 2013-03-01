@@ -6,7 +6,7 @@ version = '0.8'
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
 
-setup(name='springshop-designs',
+setup(name='lfs-theme',
       version=version,
       description='Designs for SpringShop',
       long_description=README,
@@ -20,7 +20,7 @@ setup(name='springshop-designs',
       keywords='django e-commerce online-shop',
       author='Emilian Felecan',
       author_email='emil@springmerchant.com',
-      url='http://www.springshop.ro',
+      url='',
       license='BSD',
       packages=find_packages(exclude=['ez_setup']),
       include_package_data=True,
