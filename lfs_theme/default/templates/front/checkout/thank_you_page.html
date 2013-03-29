@@ -29,6 +29,43 @@
         </p>
     {% endif %}
 
+  {% trans 'Share if you like our product!' %} 
+
+{# Product sharing module #}
+
+ {% for item in order.items.all  %}
+        <div class="shareprod-thanks">
+        <div class="sharemsg">
+        <h3>{% trans 'Share product :' %}  {{item.product_name}} </h3>
+        <a href="{% absolute_url lfs_product slug=item.product.slug %}" target="_blank"><img src="{% absolute_url item.product.get_image.image.url %}" width="100" height="100" alt=""></a>
+        <div class="sharedesc"> {{ item.product.get_meta_description }} </div>
+        </div>
+        <div class="share-thankbuttons">
+         <div id="sharefb">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={% absolute_url lfs_product slug=item.product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/facebook.png" width="24" height="24" title="{% trans 'Share on Facebook' %}" alt="{% trans 'Share product on Facebook!'  %}" /></a>
+        </div>
+  <div id="sharetw">
+        <a href="https://twitter.com/intent/tweet?text={{ item.product.get_meta_title }}&url={% absolute_url lfs_product slug=item.product.slug %}&related=" target="_blank"><img src="{{ STATIC_URL }}img/twitter.png" width="24" height="24" title="{% trans 'Share on Twitter!' %}" alt="{% trans 'Share on Twitter!' %}" /></a>
+        </div>
+
+        <div id="shareg">
+        <a href="https://plus.google.com/share?url={% absolute_url lfs_product slug=item.product.slug %}&t={{ item.product.get_meta_title }}" target="_blank"><img src="{{ STATIC_URL }}img/google.png" width="24" height="24" title="{% trans 'Share on Google+!' %}" alt="{% trans 'Share on Google+!' %}" /></a>
+        </div>
+<div id="sharepin">
+        <a href="http://pinterest.com/pin/create/button/?description={{ item.product.get_meta_description }}&media={% absolute_url item.product.get_image.image.url %}&url={% absolute_url lfs_product slug=item.product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/pinterest.png" width="24" height="24" title="{% trans 'Share on Pinterest!' %}" alt="{% trans 'Share on Pinterest!' %}" /></a>
+        </div>
+
+
+        </div>
+
+        </div>
+         {% endfor %}
+
+        {# End product sharing module #}
+
+
+
+
 {% endblock %}
 
 {% block google-analytics-tracking %}{% endblock %}

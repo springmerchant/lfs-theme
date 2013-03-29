@@ -14,9 +14,9 @@
 
 {% block head %}
 {% if product.is_variant %}
-     <link rel="canonical" href="{{ product.parent.get_absolute_url }}" />
+     <link rel="canonical" href="{% absolute_url lfs_product slug=product.parent.slug %}" />
 {% else %}
-    <link rel="canonical" href="{{ product.get_absolute_url }}" />
+    <link rel="canonical" href="{% absolute_url lfs_product slug=product.slug %}" />
 {% endif %}
 
     {% if product.get_meta_keywords %}
@@ -25,6 +25,24 @@
     {% if product.get_meta_description %}
         <meta name="description" content="{{ product.get_meta_description }}" />
     {% endif %}
+
+
+      <!-- <link rel="publisher" href="https://plus.google.com/[google-id-here]" /> -->
+
+<meta property="og:title" content="{{ product.get_meta_title }}"/>
+<meta property="og:type" content="product"/>
+<meta property="og:image" content="{% absolute_url product.get_image.image.url %}"/>
+<meta property="og:url" content="{% absolute_url lfs_product slug=product.slug %}"  />
+<meta property="og:description" content="{{ product.get_meta_description }}" />
+<!-- <meta property="fb:admins" content="[fb-admin-here]" /> -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="{% absolute_url lfs_product slug=product.slug %}">
+<meta name="twitter:title" content="{{ product.get_meta_title }}">
+<meta name="twitter:description" content="{{ product.get_meta_description }}">
+<meta name="twitter:image" content="{% absolute_url product.get_image.image.url %}">
+
+
+
 {% endblock %}
 
 {% block breadcrumbs %}

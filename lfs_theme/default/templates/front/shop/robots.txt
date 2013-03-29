@@ -1,3 +1,11 @@
-# Ganze Site für alle Robots sperren
+# Robots.txt pentru magazinele pe platforma springshop.ro
 User-agent: *
-Disallow: /
+Disallow: /search
+Disallow: /cos
+Disallow: /adaugat-in-cos
+Disallow: /login-finalizare-comanda
+Disallow: /finalizare-comanda
+Disallow: /multumesc
+Disallow: /login
+
+
