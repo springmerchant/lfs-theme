@@ -1312,3 +1312,126 @@ button.emphasized:hover {
     width: 100%;
     height: 300px;
 }
+
+/* adding the share box in product page */
+
+#shareprod {
+    float: left;
+    height: 64px;
+    opacity: 0.4;
+    width: 156px;
+    margin-left: -30px;
+    padding: 5px;
+}
+
+#shareprod:hover {
+opacity: 1;
+}
+
+
+#shareprod img {
+float: left;
+margin-right: 3px;
+}
+
+
+#sharemsg {
+color: #000;
+font-style:italic;
+font-size: 14px;
+}
+
+/* end share module in product page */
+
+/* share on Thank You page */
+
+
+
+
+
+.shareprod-thanks {
+
+width: 612px;
+
+float: left;
+
+height: 161px;
+
+border: solid 1px #9d7eb9;
+
+padding: 5px;
+
+border-radius: 7px;
+
+margin-bottom: 10px;
+
+}
+
+
+
+
+
+.shareprod-thanks img {
+
+float: left;
+
+margin-right: 3px;
+
+}
+
+
+
+
+
+.shareprod-thanks  h3 {
+
+color: #000;
+
+font-style:italic;
+
+font-size: 14px;
+
+width: 610px;
+
+overflow: hidden;
+
+}
+
+.shareprod-thanks  .sharemsg {
+
+width: 652px;
+
+overflow: hidden;
+
+}
+
+
+
+
+
+.shareprod-thanks  .sharedesc {
+
+color: #000;
+
+font-style: normal;
+
+font-size: 13px;
+
+width: 524px;
+
+float: left;
+
+height: 70px;
+
+overflow: hidden;
+
+}
+
+.share-thankbuttons {
+width: 200px;
+height: 40px;
+float: left;
+margin-lefT: 120px;
+margin-top: -50px;
+}
+/* end share on TY page */
