@@ -77,62 +77,10 @@
     </tr>
     <tr>
         <td>
-            <div>
-                {{ order.shipping_firstname }}
-            </div>
-            <div>
-                {{ order.shipping_lastname }}
-            </div>
-            <div>
-                {{ order.shipping_company_name }}
-            </div>
-            <div>
-                {{ order.shipping_line1 }}
-            </div>
-            <div>
-                {{ order.shipping_line2 }}
-            </div>
-            <div>
-                {{ order.shipping_code }} {{ order.shipping_city }}
-            </div>
-            <div>
-                {{ order.shipping_country }}
-            </div>
-            <div>
-                {{ order.shipping_phone }}
-            </div>
-            <div>
-                {{ order.shipping_email }}
-            </div>
+            {{ shipping_address|safe }}
         </td>
         <td>
-            <div>
-                {{ order.invoice_firstname }}
-            </div>
-            <div>
-                {{ order.invoice_lastname }}
-            </div>
-            <div>
-                {{ order.invoice_company_name }}
-            </div>
-            <div>
-                {{ order.invoice_line1 }}
-            </div>
-            <div>
-                {{ order.invoice_line2 }}
-            </div>
-            <div>
-                {{ order.invoice_code }} {{ order.invoice_city }}
-            </div>
-            <div>
-                {{ order.invoice_country }}
-            </div>
-            <div>
-                {{ order.invoice_phone }}
-            </div>
-            <div>
-                {{ order.invoice_email }}
-            </div>
+            {{ invoice_address|safe }}
         </td>
         <td>
             <div>
