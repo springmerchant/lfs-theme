@@ -37,12 +37,35 @@
     <h1 class="product-title">
         {{ product.get_name }}
     </h1>
+ {# Product sharing module #}
+        <div id="shareprod">
+        <div id="sharemsg">
+        {% trans 'Share, if you like our product!' %}
+        </div>
+        <div id="sharefb">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={% absolute_url lfs_product slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/facebook.png" width="24" height="24" title="{% trans 'Share on Facebook' %}" alt="{% trans 'Share product on Facebook!'  %}" /></a>
+        </div>
+  <div id="sharetw">
+        <a href="https://twitter.com/intent/tweet?text={{ product.get_meta_title }}&url={% absolute_url lfs_product slug=product.slug %}&related=" target="_blank"><img src="{{ STATIC_URL }}img/twitter.png" width="24" height="24" title="{% trans 'Share on Twitter!' %}" alt="{% trans 'Share on Twitter!' %}" /></a>
+        </div>
+
+        <div id="shareg">
+        <a href="https://plus.google.com/share?url={% absolute_url lfs_product slug=product.slug %}&t={{ product.get_meta_title }}" target="_blank"><img src="{{ STATIC_URL }}img/google.png" width="24" height="24" title="{% trans 'Share on Google+!' %}" alt="{% trans 'Share on Google+!' %}" /></a>
+        </div>
+
+        <div id="sharepin">
+        <a href="http://pinterest.com/pin/create/button/?description={{ product.get_meta_description }}&media={% absolute_url product.get_image.image.url %}&url={% absolute_url lfs_product slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/pinterest.png" width="24" height="24" title="{% trans 'Share on Pinterest!' %}" alt="{% trans 'Share on Pinterest!' %}" /></a>
+        </div>
+        </div>
+        {# End product sharing module #}
+
 
     {# Displayed Properties #}
     <div class="product-properties">
         {% for property in product.get_displayed_properties %}
             <div>
                 {{ property.title }}: {{ property.value }} {{ property.unit|safe }}
+
             </div>
         {% endfor %}
     </div>
