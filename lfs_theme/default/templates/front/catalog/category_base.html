@@ -10,7 +10,7 @@
 {% block section %}category{% endblock %}
 
 {% block head %}
-    <link rel="canonical" href="{{ category.get_absolute_url }}" />
+    <link rel="canonical" href="{% absolute_url lfs_category slug=category.slug %}" />
     {% if category.get_meta_keywords %}
         <meta name="keywords" content="{{category.get_meta_keywords}}" />
     {% endif %}
