@@ -14,7 +14,7 @@
 
 {% block head %}
 {% if product.is_variant %}
-     <link rel="canonical" href="{% absolute_url lfs_product slug=product.parent.slug %}" />
+    <link rel="canonical" href="{% absolute_url lfs_product slug=product.parent.slug %}" />
 {% else %}
     <link rel="canonical" href="{% absolute_url lfs_product slug=product.slug %}" />
 {% endif %}
@@ -22,8 +22,8 @@
 {% if product.get_meta_keywords %}
     <meta name="keywords" content="{{ product.get_meta_keywords }}" />
 {% endif %}
-    {% if product.get_meta_description %}
-        <meta name="description" content="{{ product.get_meta_description }}" />
+{% if product.get_meta_description %}
+    <meta name="description" content="{{ product.get_meta_description }}" />
 {% endif %}
 
 <!-- <link rel="publisher" href="https://plus.google.com/[google-id-here]" /> -->
