@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block head %}
-    <link rel="canonical" href="{% absolute_url lfs_page slug=page.slug %}" />
+    <link rel="canonical" href="{% absolute_url lfs_page_view slug=page.slug %}" />
 
     {% if page.get_meta_keywords %}
         <meta name="keywords" content="{{ page.get_meta_keywords }}" />
