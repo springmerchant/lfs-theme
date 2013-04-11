@@ -1,5 +1,5 @@
 {% extends "front/base.html" %}
-{% load i18n %}
+{% load i18n lfs_tags %}
 
 {% block head %}
     {% if shop.get_meta_keywords %}
@@ -22,5 +22,5 @@
 
 {% block content %}
     {{ shop.static_block.html|safe }}
-    {{ content|safe }}
+    {{ page.body|safe }}
 {% endblock %}
