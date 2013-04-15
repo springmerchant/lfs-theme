@@ -29,7 +29,6 @@
 <!-- <link rel="publisher" href="https://plus.google.com/[google-id-here]" /> -->
 <meta property="og:title" content="{{ product.get_meta_title }}"/>
 <meta property="og:type" content="product"/>
-<meta property="og:image" content="{% absolute_url product.get_image.image.url %}"/>
 <meta property="og:url" content="{% absolute_url lfs_product slug=product.slug %}"  />
 <meta property="og:description" content="{{ product.get_meta_description }}" />
 <!-- <meta property="fb:admins" content="[fb-admin-here]" /> -->
@@ -37,7 +36,12 @@
 <meta name="twitter:url" content="{% absolute_url lfs_product slug=product.slug %}">
 <meta name="twitter:title" content="{{ product.get_meta_title }}">
 <meta name="twitter:description" content="{{ product.get_meta_description }}">
+
+{% if product.get_image %}
 <meta name="twitter:image" content="{% absolute_url product.get_image.image.url %}">
+<meta property="og:image" content="{% absolute_url product.get_image.image.url %}"/>
+{% endif %}
+
 {% endblock %}
 
 {% block breadcrumbs %}
