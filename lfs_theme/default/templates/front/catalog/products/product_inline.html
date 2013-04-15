@@ -52,10 +52,12 @@
         <div id="shareg">
         <a href="https://plus.google.com/share?url={% absolute_url lfs_product slug=product.slug %}&t={{ product.get_meta_title }}" target="_blank"><img src="{{ STATIC_URL }}img/google.png" width="24" height="24" title="{% trans 'Share on Google+!' %}" alt="{% trans 'Share on Google+!' %}" /></a>
         </div>
-
+	{% if product.get_image %}
         <div id="sharepin">
         <a href="http://pinterest.com/pin/create/button/?description={{ product.get_meta_description }}&media={% absolute_url product.get_image.image.url %}&url={% absolute_url lfs_product slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/pinterest.png" width="24" height="24" title="{% trans 'Share on Pinterest!' %}" alt="{% trans 'Share on Pinterest!' %}" /></a>
         </div>
+	{% endif %}
+
         </div>
         {# End product sharing module #}
 
