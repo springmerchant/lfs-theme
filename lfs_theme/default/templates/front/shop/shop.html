@@ -8,7 +8,7 @@
     {% if shop.get_meta_description %}
         <meta name="description" content="{{ shop.get_meta_description }}" />
     {% endif %}
-	<link rel="canonical" href="{% absolute_url lfs_shop_view %}" />
+	<link rel="canonical" href="{% absolute_url "lfs_shop_view" %}" />
 
 {% endblock %}
 

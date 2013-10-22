@@ -27,13 +27,13 @@
         </div>
 
         <form class="form-vertical"
-              action="{% url lfs_login %}"
+              action="{% url "lfs_login" %}"
               method="post">
             {% csrf_token %}
 
             <div class="form">
                     {{ login_form }}
-                            <p><a href="{% url lfs_password_reset %}">{% trans 'Forgot password?' %}</a></p>
+                            <p><a href="{% url "lfs_password_reset" %}">{% trans 'Forgot password?' %}</a></p>
             </div>
 
             <input type="hidden"
@@ -56,7 +56,7 @@
                 {% trans 'If you are not already a customer you can register in order to store your address data and to follow the state of your orders.' %}
             </div>
 
-            <form action="{% url lfs_login %}"
+            <form action="{% url "lfs_login" %}"
                   method="post">
                     {% csrf_token %}
                     <div class="form">

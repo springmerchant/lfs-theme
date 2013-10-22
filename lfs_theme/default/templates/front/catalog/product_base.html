@@ -1,10 +1,8 @@
 {% extends "front/base.html" %}
 {% load i18n %}
 {% load lfs_tags %}
-{% load lfs_tagging_tags %}
 {% load lfs_theme_tags %}
 {% load reviews_tags %}
-{% load tagging_tags %}
 
 {% block title %}
     {{ product.get_meta_title }} - {{ block.super }}
@@ -14,9 +12,9 @@
 
 {% block head %}
 {% if product.is_variant %}
-    <link rel="canonical" href="{% absolute_url lfs_product slug=product.parent.slug %}" />
+    <link rel="canonical" href="{% absolute_url "lfs_product" slug=product.parent.slug %}" />
 {% else %}
-    <link rel="canonical" href="{% absolute_url lfs_product slug=product.slug %}" />
+    <link rel="canonical" href="{% absolute_url "lfs_product" slug=product.slug %}" />
 {% endif %}
 
 {% if product.get_meta_keywords %}
@@ -29,17 +27,17 @@
 <!-- <link rel="publisher" href="https://plus.google.com/[google-id-here]" /> -->
 <meta property="og:title" content="{{ product.get_meta_title }}"/>
 <meta property="og:type" content="product"/>
-<meta property="og:url" content="{% absolute_url lfs_product slug=product.slug %}"  />
+<meta property="og:url" content="{% absolute_url "lfs_product" slug=product.slug %}"  />
 <meta property="og:description" content="{{ product.get_meta_description }}" />
 <!-- <meta property="fb:admins" content="[fb-admin-here]" /> -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="{% absolute_url lfs_product slug=product.slug %}">
+<meta name="twitter:url" content="{% absolute_url "lfs_product" slug=product.slug %}">
 <meta name="twitter:title" content="{{ product.get_meta_title }}">
 <meta name="twitter:description" content="{{ product.get_meta_description }}">
 
 {% if product.get_image %}
-<meta name="twitter:image" content="{% absolute_url product.get_image.image.url %}">
-<meta property="og:image" content="{% absolute_url product.get_image.image.url %}"/>
+<meta name="twitter:image" content="{% absolute_url "product.get_image.image.url" %}">
+<meta property="og:image" content="{% absolute_url "product.get_image.image.url" %}"/>
 {% endif %}
 
 {% endblock %}
@@ -79,7 +77,7 @@
         <div class="tags">
             <h1 class="section">{% trans 'Tags' %}</h1>
             {% for tag in tags %}
-                <a href="{% url product_tag_detail tag.name %}">
+                <a href="{% url "product_tag_detail" tag.name %}">
                     {{ tag }}</a>
             {% endfor %}
         </div>
@@ -91,7 +89,7 @@
             <h1 class="section">{% trans 'Tag cloud' %}</h1>
             <div class="tag-cloud">
                 {% for tag in cloud %}
-                    <a href="{% url product_tag_detail tag.name %}" style="font-size:1{{ tag.font_size }}px">
+                    <a href="{% url "product_tag_detail" tag.name %}" style="font-size:1{{ tag.font_size }}px">
                         {{ tag }}</a>
                 {% endfor %}
             </div>
