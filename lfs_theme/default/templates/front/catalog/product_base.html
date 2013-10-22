@@ -71,31 +71,4 @@
     <a name="reviews"></a>
 
     {% reviews_for_instance product %}
-
-    {% tags_for_object product as tags %}
-    {% if tags %}
-        <div class="tags">
-            <h1 class="section">{% trans 'Tags' %}</h1>
-            {% for tag in tags %}
-                <a href="{% url "product_tag_detail" tag.name %}">
-                    {{ tag }}</a>
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    {% tag_cloud_for_model catalog.Product as cloud with steps=6 min_count=1 distribution=log %}
-    {% if cloud %}
-        <div class="tags">
-            <h1 class="section">{% trans 'Tag cloud' %}</h1>
-            <div class="tag-cloud">
-                {% for tag in cloud %}
-                    <a href="{% url "product_tag_detail" tag.name %}" style="font-size:1{{ tag.font_size }}px">
-                        {{ tag }}</a>
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-
-    {% related_products_by_tags product %}
-
 {% endblock %}
