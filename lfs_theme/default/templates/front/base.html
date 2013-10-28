@@ -9,7 +9,6 @@
     <head>
         <title>{% block title %}{{ SHOP.get_meta_title }}{% endblock %}</title>
         <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
-
         {% block head %}{% endblock %}
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="generator" content="SpringShop - http://springshop.ro" />
@@ -47,7 +46,7 @@
 		<div class="row">
 		{% block header %}
 		<div class="span4">
-			<a href="{% url lfs.core.views.shop_view %}">
+			<a href="{% url "lfs.core.views.shop_view" %}">
 				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
 			</a>
 		</div>
@@ -65,35 +64,35 @@
 								<ul class="dropdown-menu">
 									{% if user.is_superuser %}
                                 {% if category %}
-                                    <li><a href="{% url lfs_manage_category category.id %}">{% trans 'Manage' %}</a></li>
+                                    <li><a href="{% url "lfs_manage_category" category.id %}">{% trans 'Manage' %}</a></li>
                                 {% endif %}
                                 {% if product %}
-                                    <li><a href="{% url lfs_manage_product product.id %}">{% trans 'Manage' %}</a></li>
+                                    <li><a href="{% url "lfs_manage_product" product.id %}">{% trans 'Manage' %}</a></li>
                                 {% endif %}
                                 {% if page %}
-                                    <li><a href="{% url lfs_manage_page page.id %}">{% trans 'Manage' %}</a></li>
+                                    <li><a href="{% url "lfs_manage_page" page.id %}">{% trans 'Manage' %}</a></li>
                                 {% endif %}
                                 {% if not category and not product and not page %}
-                                    <li><a href="{% url lfs_manage_dashboard %}">{% trans 'Manage' %}</a></li>
+                                    <li><a href="{% url "lfs_manage_dashboard" %}">{% trans 'Manage' %}</a></li>
                                 {% endif %}
                                 
                             {% endif %}
 						
 								<li class="divider"></li>
 								<li><a href="/logout">{% trans 'Logout' %}</a></li>
-								<li><a href="{% url lfs_my_account %}">{% trans 'My account' %}</a></li>
+								<li><a href="{% url "lfs_my_account" %}">{% trans 'My account' %}</a></li>
                         {% else %}
                             {% if not ANON_ONLY %}
-                                <a href="{% url lfs_login %}">{% trans 'Login' %}</a>
+                                <a href="{% url "lfs_login" %}">{% trans 'Login' %}</a>
                             {% endif %}
 
                         {% endif %}
 
 								</ul>
 			</div>
-			<form id="search-form" action="{% url lfs_search %}" autocomplete="off">
+			<form id="search-form" action="{% url "lfs_search" %}" autocomplete="off">
 				<input type="hidden" name="livesearch" value="1" />
-				<input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url lfs_livesearch %}" placeholder="{% trans 'Search' %}" />
+				<input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
 				<input type="submit" value="{% trans 'Go!' %}" class="btn"/>
 			</form>
 		</div>

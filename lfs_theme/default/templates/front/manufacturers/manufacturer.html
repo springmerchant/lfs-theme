@@ -14,6 +14,7 @@
     {% if manufacturer.get_meta_description %}
         <meta name="description" content="{{ manufacturer.get_meta_description }}" />
     {% endif %}
+	<link rel="canonical" href="{% absolute_url "lfs_manufacturer" slug=manufacturer.slug %}" />
 {% endblock %}
 
 {% block breadcrumbs %}

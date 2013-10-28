@@ -1,6 +1,9 @@
 {% extends "front/base.html" %}
 {% load i18n lfs_tags portlets_tags lfs_theme_tags %}
 
+{% block head %}
+	<link rel="canonical" href="{% absolute_url "lfs_manufacturers" %}" />
+{% endblock %}
 {% block section %}manufacturers{% endblock %}
 
 {% block breadcrumbs %}

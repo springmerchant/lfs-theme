@@ -3,8 +3,8 @@
 {% load reviews_tags %}
 
 <form id="product-form"
-      action="{% url lfs.catalog.views.product_form_dispatcher %}"
-      data="{% url lfs_select_variant_from_properties %}"
+      action="{% url "lfs.catalog.views.product_form_dispatcher" %}"
+      data="{% url "lfs_select_variant_from_properties" %}"
       method="post">
     {% csrf_token %}
 
@@ -43,19 +43,21 @@
         {% trans 'Share, if you like our product!' %}
         </div>
         <div id="sharefb">
-        <a href="https://www.facebook.com/sharer/sharer.php?u={% absolute_url lfs_product slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/facebook.png" width="24" height="24" title="{% trans 'Share on Facebook' %}" alt="{% trans 'Share product on Facebook!'  %}" /></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={% absolute_url "lfs_product" slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/facebook.png" width="24" height="24" title="{% trans 'Share on Facebook' %}" alt="{% trans 'Share product on Facebook!'  %}" /></a>
         </div>
   <div id="sharetw">
-        <a href="https://twitter.com/intent/tweet?text={{ product.get_meta_title }}&url={% absolute_url lfs_product slug=product.slug %}&related=" target="_blank"><img src="{{ STATIC_URL }}img/twitter.png" width="24" height="24" title="{% trans 'Share on Twitter!' %}" alt="{% trans 'Share on Twitter!' %}" /></a>
+        <a href="https://twitter.com/intent/tweet?text={{ product.get_meta_title }}&url={% absolute_url "lfs_product" slug=product.slug %}&related=" target="_blank"><img src="{{ STATIC_URL }}img/twitter.png" width="24" height="24" title="{% trans 'Share on Twitter!' %}" alt="{% trans 'Share on Twitter!' %}" /></a>
         </div>
 
         <div id="shareg">
-        <a href="https://plus.google.com/share?url={% absolute_url lfs_product slug=product.slug %}&t={{ product.get_meta_title }}" target="_blank"><img src="{{ STATIC_URL }}img/google.png" width="24" height="24" title="{% trans 'Share on Google+!' %}" alt="{% trans 'Share on Google+!' %}" /></a>
+        <a href="https://plus.google.com/share?url={% absolute_url "lfs_product" slug=product.slug %}&t={{ product.get_meta_title }}" target="_blank"><img src="{{ STATIC_URL }}img/google.png" width="24" height="24" title="{% trans 'Share on Google+!' %}" alt="{% trans 'Share on Google+!' %}" /></a>
         </div>
-
+	{% if product.get_image %}
         <div id="sharepin">
-        <a href="http://pinterest.com/pin/create/button/?description={{ product.get_meta_description }}&media={% absolute_url product.get_image.image.url %}&url={% absolute_url lfs_product slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/pinterest.png" width="24" height="24" title="{% trans 'Share on Pinterest!' %}" alt="{% trans 'Share on Pinterest!' %}" /></a>
+        <a href="http://pinterest.com/pin/create/button/?description={{ product.get_meta_description }}&media={% absolute_url "product.get_image.image.url" %}&url={% absolute_url "lfs_product" slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/pinterest.png" width="24" height="24" title="{% trans 'Share on Pinterest!' %}" alt="{% trans 'Share on Pinterest!' %}" /></a>
         </div>
+	{% endif %}
+
         </div>
         {# End product sharing module #}
 
@@ -128,7 +130,7 @@
     {% if product.is_configurable_product %}
         <table class="cp-properties"
                id="cp-url"
-               data="{% url lfs_calculate_price product.id %}">
+               data="{% url "lfs_calculate_price" product.id %}">
 
             {% for property in properties %}
                 <tr>
@@ -183,7 +185,7 @@
                     <td>
                         <div class="product-quantity packing-unit"
                             id="packing-url"
-                            data="{% url lfs_calculate_packing product.id %}">
+                            data="{% url "lfs_calculate_packing" product.id %}">
                             <input class="number quantity span12"
                                    name="quantity"
                                    size="3"
@@ -219,7 +221,7 @@
         </div>
     {% else %}
         <button class="emphasized"
-                onclick="window.location='{% url lfs_contact_form %}'; return false"
+                onclick="window.location='{% url "lfs_contact_form" %}'; return false"
                 name="">{% trans 'Send request' %}</button>
     {% endif %}
 	</div>
@@ -232,7 +234,7 @@
             {# List #}
             {% if display_variants_list %}
                 <table class="table table-bordered"
-                       data="{% url lfs_select_variant %}">
+                       data="{% url "lfs_select_variant" %}">
                     <tr>
                         <th></th>
                         <th>

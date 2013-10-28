@@ -1,5 +1,5 @@
 {% extends "front/base.html" %}
-{% load i18n %}
+{% load i18n lfs_tags %}
 
 {% block head %}
     {% if shop.get_meta_keywords %}
@@ -8,6 +8,8 @@
     {% if shop.get_meta_description %}
         <meta name="description" content="{{ shop.get_meta_description }}" />
     {% endif %}
+	<link rel="canonical" href="{% absolute_url "lfs_shop_view" %}" />
+
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -21,5 +23,5 @@
 
 {% block content %}
     {{ shop.static_block.html|safe }}
-    {{ shop.description|safe }}
+    {{ page.body|safe }}
 {% endblock %}

@@ -8,7 +8,7 @@
 
 {% block content %}
     <div class="page-header"><h1>{% trans 'Change your profile' %}</h1></div>
-    <form action="{% url lfs_my_profile %}"
+    <form action="{% url "lfs_my_profile" %}"
           method="post" class="form-horizontal">
         {% csrf_token %}
         
